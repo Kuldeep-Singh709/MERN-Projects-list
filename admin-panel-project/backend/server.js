@@ -15,7 +15,8 @@ const connectDatabase = require("./config/database");
 dotenv.config({ path:"backend/config/config.env" });
 
 
-app.use(express.json());
+app.use(express.json()); //When you send data to the server through an HTTP POST request with a JSON payload,
+                        //  the express.json() middleware parses the JSON data and makes it available in the req.body object of the route handlers.
 // app.use(cookieParser());
 
 app.use("/api/v1",authRoute);
