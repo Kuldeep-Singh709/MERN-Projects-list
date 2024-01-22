@@ -6,20 +6,28 @@ const userSchema = new mongoose.Schema({
   username: {
     type: String,
     require: [true, "Please Enter Your Name"],
+    maxLength: [30, "Name cannot exceed 30 characters"],
+    minLength: [4, "Name should have more than 4 characters"],
   },
   email: {
     type: String,
-    require: [true, "Please ENter Your Email"],
+    required: [true, "Please Enter Your Email"],
     unique: true,
+    maxLength: [30, "Email cannot exceed 30 characters"],
+    minLength: [6, "Email should have more than 6 characters"],
+    // validate: [validator.isEmail, "Please Enter a valid Email"],
   },
   password: {
     type: String,
     require: [true, "Please Enter Password"],
+    minLength: [8, "Password should be greater than 8 characters"],
     // select: false,
   },
   phone: {
     type: Number,
-    require: [true, "Please Enter Your Mobile Number"],
+    require: [true, "Please Enter Your COntact Number"],
+    maxLength: [15, "Phone Number cannot exceed 15 characters"],
+    minLength: [9, "Phone Number should have more than 9 characters"],
   },
   role: {
     type: String,
@@ -41,23 +49,9 @@ userSchema.pre("save", async function (next) {
 
 //Compare Hashed Password using compare() method
 
-userSchema.methods.comparePassword = function (password) {
-    return new Promise((resolve, reject) => {
-      bcrypt.compare(password, this.password, (error, result) => {
-        if (error) {
-          reject(error);
-        } else {
-          resolve(result);
-        }
-      });
-    });
-  };
-  
-
-// userSchema.methods.comparePassword = async function (password) {
-//     return await bcrypt.compare(password, this.password);
-//   }; //Do Not Use Arrow Function BZ "Arrow" function does not have "This" keyword
-  
+userSchema.methods.comparePassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+}; //Do Not Use Arrow Function Here BZ "Arrow" function does not have "This" keyword
 
 //JWT Token (JWT always Has three part Hearder,Payload,Signature)and (we Always created Payload and Signature inside the .SIGN() method)
 

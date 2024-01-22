@@ -45,9 +45,10 @@ exports.Register = async (req, res) => {
       jwtToken,
     });
   } catch (error) {
+    console.log(error.message);
     res.status(400).json({
       success: false,
-      message: "Error on Register Page",
+      message: error.message ,
     });
   }
 };
@@ -68,19 +69,23 @@ exports.userLogin = async (req, res, next) => {
     const isCompareMatched = await user.comparePassword(password);
 
     if (!isCompareMatched) {
-      return next(console.log("Something Went Wrong in Input"));
+     console.log(error.message);
+      return next(error.message );
     }
 
     res.status(200).json({
       success: true,
       message: "User Logged in",
-      user,
+      userID: user._id.toString(), //Optional
+      Token: await user.generateJWTToken(), //JWT TOKEN
+      // user,
     });
 
   } catch (error) {
+     console.log(error.message);
     res.status(401).json({
       success: false,
-      message: "Error On Login Page",
+      message: error.message,
     });
   }
 };
