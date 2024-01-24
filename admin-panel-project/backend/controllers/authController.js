@@ -1,5 +1,7 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/userModel");
+// const Error = require("../middleware/errorMiddleware");
+
 
 exports.Home = async (req, res) => {
   try {
@@ -8,14 +10,11 @@ exports.Home = async (req, res) => {
       message: "Welcome to HOME Page",
     });
   } catch (error) {
-    res.send(400).json({
-      success: false,
-      message: "Error encounter at Home Page",
-    });
+    return next(new Error("HomePage Error", 400));
   }
 };
 // Register To a User
-exports.Register = async (req, res) => {
+exports.Register = async (req, res,next) => {
   try {
     // console.log("User Input:", req.body);
     const { username, email, password, phone } = req.body;
@@ -45,11 +44,8 @@ exports.Register = async (req, res) => {
       jwtToken,
     });
   } catch (error) {
-    console.log(error.message);
-    res.status(400).json({
-      success: false,
-      message: error.message ,
-    });
+    // return next(new Error("User Registration Went Wrong..", 400));
+    return next(new Error(error.message,400));
   }
 };
 
@@ -61,10 +57,8 @@ exports.userLogin = async (req, res, next) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res
-        .status(401)
-        .json({ Message: "Invalid Input Data, User is Not Found " });
-    }
+      return next(new Error("Invalid Input Data, User is Not Found", 401));
+     }
 
     const isCompareMatched = await user.comparePassword(password);
 
@@ -82,11 +76,7 @@ exports.userLogin = async (req, res, next) => {
     });
 
   } catch (error) {
-     console.log(error.message);
-    res.status(401).json({
-      success: false,
-      message: error.message,
-    });
+  return next(new Error("Login Went Wrong..", 401));
   }
 };
 

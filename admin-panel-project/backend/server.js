@@ -2,13 +2,14 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const connectDatabase = require("./config/database");
+const errorMiddleware = require("./middleware/errorMiddleware");
 
 // const path = require("path");
 // const cookieParser = require("cookie-parser");
 
 //import Route
   const authRoute = require("./Routes/authRoute");
-
+  const contactRoute = require("./Routes/contactRoute");
 
 
 
@@ -20,10 +21,13 @@ app.use(express.json()); //When you send data to the server through an HTTP POST
 // app.use(cookieParser());
 
 app.use("/api/v1",authRoute);
-
+app.use("/api/v2",contactRoute);
 
 
 connectDatabase();
+
+app.use(errorMiddleware);
+
 
 app.listen(process.env.PORT, (err) => {
   if (err) {
@@ -32,3 +36,8 @@ app.listen(process.env.PORT, (err) => {
     console.log(`Server is working on http://localhost:${process.env.PORT}`);
   }
 });
+
+
+
+// app.use(errorMiddleware);
+

@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     required: [true, "Please Enter Your Email"],
     unique: true,
     maxLength: [30, "Email cannot exceed 30 characters"],
-    minLength: [6, "Email should have more than 6 characters"],
+    minLength: [4, "Email should have more than 4 characters"],
     // validate: [validator.isEmail, "Please Enter a valid Email"],
   },
   password: {
@@ -25,6 +25,7 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: Number,
+    // type: String,
     require: [true, "Please Enter Your COntact Number"],
     maxLength: [15, "Phone Number cannot exceed 15 characters"],
     minLength: [9, "Phone Number should have more than 9 characters"],
@@ -69,6 +70,7 @@ userSchema.methods.generateJWTToken = async function () {
 
       {
         expiresIn: process.env.JWT_EXPIRE,
+        
       }
     );
   } catch (error) {
