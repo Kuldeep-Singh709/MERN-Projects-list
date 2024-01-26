@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sectionTag {
+
+    display: flex;
+    max-height: 100vh;
+    padding: 0 30px 0 30px;
+    background-color:black;
+}
+
+.figureTag,
+.mainTag {
+    flex: 1;
+    padding: 5px;
+    background-color: black;
+    border: 1px solid gold;
+}
+
+.figureTag {
+    background-color: teal;
+    max-height: 100vh;
+    position: relative;
+    /* Required for absolute positioning */
+    overflow: hidden;
+    /* Hide any content that overflows */
+}
+
+img {
+    width: 100%;
+    /* Make the image take 100% width of its container */
+    height: 100%;
+    /* Make the image take 100% height of its container */
+    object-fit: cover;
+    /* Cover the entire container, maintaining aspect ratio */
+    position: absolute;
+    /* Position the image absolutely within the figure tag */
+    top: 0;
+    left: 0;
+}
+
+
+.mainTag {
+    background-color:black;
+    color: whitesmoke;
+    max-height: 100vh;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=number],input[type=email] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+
+.formHeadingTag {}
+
+.contantTag {}
