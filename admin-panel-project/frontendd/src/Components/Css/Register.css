@@ -5,67 +5,92 @@
 }
 
 .sectionTag {
-
     display: flex;
     max-height: 100vh;
     padding: 0 30px 0 30px;
-    background-color:black;
+    background-color: black;
 }
 
 .figureTag,
 .mainTag {
     flex: 1;
-    padding: 5px;
     background-color: black;
-    border: 1px solid gold;
+    border: none;
 }
 
 .figureTag {
-    background-color: teal;
+    /* background-color: teal; */
     max-height: 100vh;
     position: relative;
-    /* Required for absolute positioning */
     overflow: hidden;
-    /* Hide any content that overflows */
 }
 
-img {
-    width: 100%;
-    /* Make the image take 100% width of its container */
+.regimage {
+    width: fit-content;
     height: 100%;
-    /* Make the image take 100% height of its container */
     object-fit: cover;
-    /* Cover the entire container, maintaining aspect ratio */
     position: absolute;
-    /* Position the image absolutely within the figure tag */
     top: 0;
     left: 0;
 }
 
 
 .mainTag {
-    background-color:black;
+    background-color: black;
     color: whitesmoke;
     max-height: 100vh;
+    margin-left: 4.5rem;
 
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password],input[type=number],input[type=email] {
-    width: 80%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
 
-.formHeadingTag {}
+.regInput{
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    background: #747d8c;
+}
 
-.contantTag {}
+
+
+.btnTag {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.subBtn {
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 8rem;
+}
+
+.subBtn:hover {
+    cursor: pointer;
+    background-color: darkcyan;
+    border: 1px solid crimson;
+    color: white;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.formHeadingTag {
+
+    background-color: black;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid blue;
+}
+
+.headingWord {
+    font-size: 2.5rem;
+    margin: 2px;
+}

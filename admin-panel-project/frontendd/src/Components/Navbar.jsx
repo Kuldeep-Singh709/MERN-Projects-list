@@ -7,7 +7,7 @@ export default function Navbar() {
       <header>
         <div className="container">
           <div className="logoName">
-            <NavLink to="/">Admin Panel</NavLink>
+            <h1>Admin Panel</h1>
           </div>
 
           <nav>

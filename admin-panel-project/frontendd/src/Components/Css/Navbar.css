@@ -3,7 +3,8 @@
     padding: 3.0rem 2.4rem;
     display: flex;
     justify-content: space-between;
-    background-color: darkgrey;
+    /* background-color: #2f3542; */
+    background-color: black;
     /* margin:0 auto; */
 }
 
@@ -12,3 +13,44 @@ ul{
     gap: 3.2rem;
 }
 
+a{
+    font-size: 1.8rem;
+    font-weight:500;
+    letter-spacing: 0.1rem;
+    color: #3742fa;
+    text-decoration: inherit;
+    border-bottom: 2px solid transparent;
+  }
+
+  a:hover{
+    color: #BDC581;
+  }
+  a.active{
+    border-bottom: 3px solid #d63031;
+  }
+  .logoName h1{
+    color: gold;
+    font-stretch:expanded;
+    font-size: 2.7rem;
+    font-weight:500;
+    letter-spacing: 0.4rem;
+    /* animation: shine 2s infinite; */
+    
+  }
+  /* .logoName>a:hover{
+    color: #3742fa;
+
+  } */
+
+
+  /* Define the animation */
+  @keyframes shine {
+    0% { background-color: gold; }
+    50% { background-color: rgba(255, 215, 0, 0.5); }
+    100% { background-color: gold; }
+  }
+
+  /* Apply the animation to the tag */
+  .shining-tag {
+    animation: shine 2s infinite;
+  }

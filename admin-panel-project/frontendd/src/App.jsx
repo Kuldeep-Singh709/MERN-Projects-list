@@ -6,6 +6,9 @@ import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Service from "./Pages/Service";
 import Navbar from "./Components/Navbar";
+import Fotter from "./Components/Fotter";
+import 'font-awesome/css/font-awesome.min.css';// Import the Font Awesome styles
+
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/service" element={<Service />} />
         </Routes>
+        <Fotter />
       </BrowserRouter>
     </>
   );
