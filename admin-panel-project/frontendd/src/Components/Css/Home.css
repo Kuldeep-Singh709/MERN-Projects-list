@@ -1,0 +1,156 @@
+.homeOutterContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    background-color: black;
+    max-width: 100vw;
+    max-height: fit-content;
+}
+
+.LHShomeContainer,
+.RHShomeContainer {
+    max-width: 100%;
+    height: 80vh;
+}
+
+.LHShomeContainer {
+    background-color: #31343B;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.RHShomeContainer {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #31343B;
+    color: white;
+    position: relative;
+}
+.RHSinnercontainer{
+    max-height: 60%;
+    position: relative;
+    top:22%;
+    bottom:0;
+    width: 70%;
+    box-shadow: none;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.LHSinnerContainer {
+    margin:2em;
+    padding: 1em;
+}
+
+.LHSItems {
+    background-color: #31343B;
+    color: white;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.LHSItems h1{
+    font-size: 3.5em;
+    letter-spacing: 0.5rem;
+    line-height: 1.46;
+    word-spacing: 0.06rem;
+    /* color: #CAD3C8; */
+    color: #B9CEEE;
+
+}
+
+
+.LHSItems p{
+
+    font-size: 1.5em;
+    letter-spacing: 0.2rem;
+    line-height: 1.26;
+    word-spacing: 0.04rem;
+    text-indent: 0;
+    text-align:left;
+    color: #c44569;
+    /* color: #B9CEEE; */
+}
+
+/* .homeBTN{
+    border: 1px solid yellow;
+} */
+
+.BTNone,.BTNsecond{
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 4em;
+    cursor: pointer;
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+    word-spacing: 0.04rem;
+}
+/* .homeBTN a{
+    text-decoration: none;
+    color: red;
+} */
+.BTNone{
+    background-color: #2e86de;
+}
+.BTNone span{
+    color: white;
+}
+.BTNone span:hover{
+    color: black;
+}
+.BTNone:hover{
+    background-color:#0984e3;
+}
+
+.BTNsecond{
+    border: none;
+    background-color: #f1f2f6;
+}
+.BTNsecond span{
+    color: black;
+}
+.BTNsecond span:hover{
+    color:white;
+}
+.BTNsecond:hover{
+    background-color:dodgerblue;
+}
+
+/* .homeImage{
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+} */
+
+.RHSinnercontainer img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    box-shadow: none;
+}
+
+
+
+
+
+/* 
+.image-carousel {
+    position: relative;
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  } */

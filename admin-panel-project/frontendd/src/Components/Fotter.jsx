@@ -57,7 +57,7 @@ export default function Fotter() {
         </ul>
       </div>
       <div className="thirdDiv">
-        <p>INFFO Copyright © 2023 Info - All rights reserved || Designed By:
+        <p>INFFO Copyright © 2023 Info - All rights reserved   ||    Designed By:
           Kuldeep Singh</p>
       </div>
     </div>

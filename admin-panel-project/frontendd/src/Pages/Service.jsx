@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import '../Components/Css/Default.css';
 
 export default function Service() {
   return (
-    <div>
-        <h1>Welcome to Sewrvice Page</h1>
+    <div className="tagOutter">
+      <div className="tagInner">
+        <h1>Welcome to Service Page</h1>
+      </div>
     </div>
-  )
+  );
 }

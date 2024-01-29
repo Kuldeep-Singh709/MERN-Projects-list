@@ -30,8 +30,8 @@ export default function Login() {
 
         <figure className="figureContainer">
           <div className="LHStag">
-            <img src="/images/Icon5.jpg" className="logimage" />
-            {/* <p className="running-text">Running Text</p> */}
+            {/* <img src="/images/Icon5.jpg" className="logimage" /> */}
+            <img src="/images/Login.jpg" className="logimage" />
           </div>
         </figure>
 

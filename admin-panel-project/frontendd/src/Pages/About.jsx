@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import '../Components/Css/Default.css';
 
 export default function About() {
+
+
   return (
-    <div>
-      <h1>Welcome to About Page</h1>
+    <div className="tagOutter">
+        <h1 className="tagInner">Welcomme TO About Page</h1>      
     </div>
   );
 }

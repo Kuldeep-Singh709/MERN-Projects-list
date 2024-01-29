@@ -33,7 +33,8 @@ const handleSubmit =(e)=> {
     <>
       <section className="sectionTag">
         <figure className="figureTag">
-          <img src="/images/LoginBGC2.jpg" alt="Registraion Form image" className="regimage"/>
+          <img src="/images/Registration.jpg" alt="Registraion Form image" className="regimage"/>
+
         </figure>
         <main className="mainTag">
           <div className="formHeadingTag">

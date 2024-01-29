@@ -1,19 +1,20 @@
 .container{
     max-width: 140rem;
-    padding: 3.0rem 2.4rem;
+    padding: 2rem 1.4rem;
     display: flex;
     justify-content: space-between;
     /* background-color: #2f3542; */
     background-color: black;
     /* margin:0 auto; */
+    /* border: 1px solid red; */
 }
 
-ul{
+.navbarLink ul{
     display: flex;
     gap: 3.2rem;
 }
 
-a{
+.navbarLink a{
     font-size: 1.8rem;
     font-weight:500;
     letter-spacing: 0.1rem;
@@ -22,11 +23,19 @@ a{
     border-bottom: 2px solid transparent;
   }
 
-  a:hover{
-    color: #BDC581;
+.navbarLink a:hover{
+    color:#ffb8b8;
   }
-  a.active{
+  .navbarLink a.active{
     border-bottom: 3px solid #d63031;
+    color: #F8EFBA;
+    /* color:#ffb8b8; */
+    /* color:#BDC581; */
+  }
+  .logoName{
+    border: 0.5em solid white;
+    box-sizing: border-box;
+    padding: 0.2em;
   }
   .logoName h1{
     color: gold;
@@ -34,6 +43,7 @@ a{
     font-size: 2.7rem;
     font-weight:500;
     letter-spacing: 0.4rem;
+
     /* animation: shine 2s infinite; */
     
   }

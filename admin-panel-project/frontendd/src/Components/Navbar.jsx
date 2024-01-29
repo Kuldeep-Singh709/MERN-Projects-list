@@ -10,7 +10,7 @@ export default function Navbar() {
             <h1>Admin Panel</h1>
           </div>
 
-          <nav>
+          <nav className="navbarLink">
             <ul>
               <li>
                 <NavLink to="/">Home</NavLink>

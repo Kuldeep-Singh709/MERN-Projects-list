@@ -1,0 +1,17 @@
+.tagOutter{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height: 35rem;
+    /* max-height:100vh; */
+    background-color: black;
+    color: white;
+}
+.tagInner{
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.36;
+    word-spacing: 0.06rem;
+}
