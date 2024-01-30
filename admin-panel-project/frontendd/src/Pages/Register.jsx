@@ -31,18 +31,18 @@ const handleSubmit =(e)=> {
 
   return (
     <>
-      <section className="sectionTag">
-        <figure className="figureTag">
-          <img src="/images/Registration.jpg" alt="Registraion Form image" className="regimage"/>
+      <section className="registerSectionTag">
+        <figure className="registerfigureTag">
+          <img src="/images/Registrationimg.jpg" alt="Registraion Form image" className="regimage"/>
 
         </figure>
-        <main className="mainTag">
-          <div className="formHeadingTag">
+        <main className="registermainTag">
+          <div className="registerformHeadingTag">
             <h1 className="headingWord">Registration</h1>
           </div>
-          <div className="contantTag">
-            <form onSubmit={handleSubmit}>
-              <div>
+          <div className="registerContantTag">
+            <form onSubmit={handleSubmit} className="registerFormTag">
+              <div className="registerinputdiv">
                 <label htmlFor="uname">
                   <b>UserName</b>
                 </label>
@@ -55,10 +55,10 @@ const handleSubmit =(e)=> {
                   autoComplete="off"
                   required
                   onChange={handlerFunction}
-                  className="regInput"
+                  className="inputregTag"
                 />
               </div>
-              <div>
+              <div className="registerinputdiv">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -69,10 +69,10 @@ const handleSubmit =(e)=> {
                   autoComplete="off"
                   required
                   onChange={handlerFunction}
-                  className="regInput"
+                  className="inputregTag"
                 />
               </div>
-              <div>
+              <div className="registerinputdiv">
                 <label htmlFor="ph">Phone</label>
                 <input
                   type="number"
@@ -83,10 +83,10 @@ const handleSubmit =(e)=> {
                   autoComplete="off"
                   required
                   onChange={handlerFunction}
-                  className="regInput"
+                  className="inputregTag"
                 />
               </div>
-              <div>
+              <div className="registerinputdiv">
                 <label htmlFor="pass">Password</label>
                 <input
                   type="password"
@@ -97,11 +97,11 @@ const handleSubmit =(e)=> {
                   autoComplete="off"
                   required
                   onChange={handlerFunction}
-                  className="regInput"
+                  className="inputregTag"
                 />
               </div>
               <br />
-              <div className="btnTag">
+              <div className="regBtnTag registerinputdiv">
               <button type="submit" className="subBtn">Register</button>
               </div>
             </form>

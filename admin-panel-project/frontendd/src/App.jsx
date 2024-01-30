@@ -8,6 +8,7 @@ import Service from "./Pages/Service";
 import Navbar from "./Components/Navbar";
 import Fotter from "./Components/Fotter";
 import 'font-awesome/css/font-awesome.min.css';// Import the Font Awesome styles
+import Error from "./Pages/Error";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/service" element={<Service />} />
+          <Route path="*"  element={<Error/>} /> //WildCard Route
         </Routes>
         <Fotter />
       </BrowserRouter>

@@ -25,26 +25,25 @@ export default function Login() {
 
   return (
     <>
-      <section className="sectionContainer">
+      <section className="sectionLoginContainer">
         {/* ----RHS---- */}
 
-        <figure className="figureContainer">
+        <figure className="figureLoginContainer">
           <div className="LHStag">
-            {/* <img src="/images/Icon5.jpg" className="logimage" /> */}
-            <img src="/images/Login.jpg" className="logimage" />
+            <img src="/images/Loginimg.avif" alt="Registraion Form image" className="logimage"/>
           </div>
         </figure>
 
         {/* ----LHS---- */}
 
-        <main className="mainContainer">
+        <main className="mainLoginContainer">
           {/* <div className="headingContainer">
             <h1>Login Page</h1>
           </div> */}
 
           <div className="contentContainer">
             <form onSubmit={handleSubmit} className="formContainer">
-              <div>
+              <div className="logininputDIV">
                 {/* <label htmlFor="email" /> */}
                 <input
                   type="email"
@@ -58,7 +57,7 @@ export default function Login() {
                   className="custom-input"
                 />
               </div>
-              <div>
+              <div className="logininputDIV">
                 {/* <label htmlFor="pass" /> */}
                 <input
                   type="password"
@@ -73,7 +72,7 @@ export default function Login() {
                 />
               </div>
 
-              <div className="lgBtn">
+              <div className="lgBtn logininputDIV">
                 <button type="submit">Login Now</button>
               </div>
             </form>

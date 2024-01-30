@@ -137,20 +137,51 @@
 
 
 
+/* Media Query */
 
 
-/* 
-.image-carousel {
-    position: relative;
-  }
-  
-  .image-container {
+/* For Screen Size 768px(Phone) */
+
+
+@media screen and (max-width:767px) {
+
+.homeOutterContainer{
     display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .image-container img {
+    flex-wrap: wrap;
+    padding:0;
+    max-width: 100%;
+}
+.RHShomeContainer{
+    order: 1;
+    height:50vh;
+    margin: 0;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-  } */
+}
+.LHShomeContainer{
+    order: 2;
+    margin: 0;
+    max-height: fit-content;
+}
+}
+
+
+/* For screens between 768px and 1023px (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .homeOutterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding:0;
+    max-width: 100%;
+}
+.RHShomeContainer{
+    order: 1;
+    height:50vh;
+    margin: 0;
+    width: 100%;
+}
+.LHShomeContainer{
+    order: 2;
+    margin: 0;
+    max-height: fit-content;
+}
+}

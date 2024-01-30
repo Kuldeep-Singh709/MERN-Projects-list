@@ -1,0 +1,113 @@
+.errorOuttercontainer{
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+           background-color: black;
+    color: white;
+    max-width: 100vw;
+    height: 60vh;
+    padding: 2px;
+}
+
+.errorInnerContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+        height: 100%;
+}
+
+.errorItems{ 
+    /* border: 1px solid green; */
+    max-width: 50%;
+    margin: 2px;
+    padding: 4px;
+}
+
+.errorFirstItem h1{
+    font-size: 8.5em;
+    letter-spacing: 0.8rem;
+    word-spacing: 0.09rem;
+    line-height: 1.16;
+    /* padding: 5px; */
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: gray;
+    color: red;
+
+}
+
+.errorFirstItem{}
+
+.errorSecondItem{
+    background-color: #ffeaa7;
+    color: black;
+}
+
+.errorThirdItem{
+    font-size: 1.5em;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.03rem;
+    line-height: 1.26;
+    background-color: #fab1a0;
+    color: black;
+}
+
+.errorFourthItem{
+    
+}
+
+.errorBTN button{
+    /* padding: 2em; */
+}
+
+.errorBTN{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border: 1px solid black;
+    background-color: dodgerblue;
+    border-radius: 1em;
+    /* color: black; */
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.01rem;
+    line-height: 1.06;
+}
+.errorBTN:hover{
+    background-color: #0984e3;
+}
+.errorBTN a{
+    color: white;
+    background-color: dodgerblue;
+}
+
+.errorBTN  a:hover {
+    cursor: pointer;
+    background-color: #0984e3;
+    color: black;
+} 
+
+/* .btncontactRHS button {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border: 1px solid black;
+    background-color: dodgerblue;
+    border-radius: 1em;
+    color: black;
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.01rem;
+    line-height: 1.06;
+}
+
+.btncontactRHS button:hover {
+    cursor: pointer;
+    background-color: #0984e3;
+    color: white;
+} */

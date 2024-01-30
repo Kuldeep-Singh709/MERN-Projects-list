@@ -3,10 +3,7 @@
     padding: 2rem 1.4rem;
     display: flex;
     justify-content: space-between;
-    /* background-color: #2f3542; */
     background-color: black;
-    /* margin:0 auto; */
-    /* border: 1px solid red; */
 }
 
 .navbarLink ul{
@@ -29,8 +26,6 @@
   .navbarLink a.active{
     border-bottom: 3px solid #d63031;
     color: #F8EFBA;
-    /* color:#ffb8b8; */
-    /* color:#BDC581; */
   }
   .logoName{
     border: 0.5em solid white;
@@ -42,17 +37,8 @@
     font-stretch:expanded;
     font-size: 2.7rem;
     font-weight:500;
-    letter-spacing: 0.4rem;
-
-    /* animation: shine 2s infinite; */
-    
+    letter-spacing: 0.4rem;    
   }
-  /* .logoName>a:hover{
-    color: #3742fa;
-
-  } */
-
-
   /* Define the animation */
   @keyframes shine {
     0% { background-color: gold; }
@@ -64,3 +50,56 @@
   .shining-tag {
     animation: shine 2s infinite;
   }
+
+
+  /* Media Queries */
+
+/* For screens smaller than 768px (phones) */
+@media screen and (max-width: 767px) {
+  .container {
+      padding: 1rem;
+      flex-direction: column; 
+      align-items: center;  
+  }
+
+  .navbarLink{
+    border: 0.3em solid rebeccapurple;
+    padding: 0.5em;
+    margin: 0px;
+  }
+  .navbarLink ul {
+      flex-wrap: wrap;
+      gap: 1rem;
+  }
+
+  .logoName {
+    border: 0.1em solid white;
+    box-sizing: border-box;
+      margin-bottom: 1rem; 
+  }
+}
+
+/* For screens between 768px and 1023px (tablets) */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .container {
+  flex-direction: column; 
+  align-items: center;  
+      padding: 1.5rem;
+  }
+  .logoName {
+    border: 0.3em solid white;
+    box-sizing: border-box;
+      margin-bottom: 1rem; 
+  }
+  .navbarLink{
+    border: 0.2em solid rebeccapurple;
+    padding: 0.5em;
+    margin: 0px;
+   }
+
+}
+
+/* For screens larger than 1023px (desktops) */
+@media screen and (min-width: 1024px) {
+  /* Additional styles for desktops (If you Have) */
+}

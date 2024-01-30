@@ -51,3 +51,30 @@
     /* letter-spacing: 0.1rem; */
     word-spacing: 0.3em;
 }
+
+/* Media Queries */
+
+/* For screens smaller than 768px (phones) */
+@media screen and (max-width: 767px) {
+    .outterFotterTag{
+        max-width:100%;
+    }
+    .firstDiv a {
+        margin-right: 1rem;
+     }
+}
+
+/* For screens between 768px and 1023px (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .firstDiv {
+        font-size: 1rem; 
+    }
+    .secondDiv li {
+        margin-left: 1em; 
+     }
+}
+
+/* For screens larger than 1023px (desktops) */
+@media screen and (min-width: 1024px) {
+    /* You can add additional styles for desktops here */
+}

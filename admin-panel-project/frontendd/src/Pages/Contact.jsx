@@ -2,22 +2,29 @@ import React, { useState } from "react";
 import "../Components/Css/Contact.css";
 
 export default function Contact() {
-  const [user, setUser] = useState({
+  const [contact, setContact] = useState({
     username: "",
     email: "",
     message: "",
   });
 
   const changeHandler = (e) => {
-    let name = e.target.name;
-    let value = e.target.value;
-    setUser({
-      ...(user[name] = value),
+    const name = e.target.name;
+    const value = e.target.value;
+    setContact({
+      ...contact,
+      [name]:value,
     });
+
+      // setContact((contact)=>({
+      //   ...contact,
+      //   [name]:value,
+      // }));
   };
 
   const contactSubmitHandler = (e) => {
     e.preventDefault();
+    console.log(contact);
   };
 
   return (
@@ -73,10 +80,12 @@ export default function Contact() {
                   type="text"
                   id="uname"
                   name="username"
-                  value={user.username}
+                  value={contact.username}
                   onChange={changeHandler}
                   autoComplete="off"
+                  required
                 />
+                
               </div>
               <div className="inputRHS">
                 <label htmlFor="email">Email</label>
@@ -84,17 +93,22 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
-                  value={user.email}
+                  value={contact.email}
                   onChange={changeHandler}
                   autoComplete="off"
+                  required
                 />
               </div>
               <div className="inputRHS">
                 <label htmlFor="message">Message</label>
                 <textarea
                   id="message"
-                  value={user.message}
+                  // cols={30}
+                  // rows={10}
+                  value={contact.textareamessage}
                   onChange={changeHandler}
+                  // autoComplete="off"
+                  // required
                 />
               </div>
               <div className="inputRHS btncontactRHS">
