@@ -21,8 +21,9 @@
   }
 
 .navbarLink a:hover{
-    color:#ffb8b8;
-  }
+    color:#dda4a4;
+    /* color:darkturquoise; */
+}
   .navbarLink a.active{
     border-bottom: 3px solid #d63031;
     color: #F8EFBA;

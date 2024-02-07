@@ -5,7 +5,7 @@ import "../Components/Css/Error.css";
 export default function Error() {
   return (
     <>
-      <div className="errorOuttercontainer">
+      {/* <div className="errorOuttercontainer"> */}
         <div className="errorInnerContainer">
           <div className="errorItems errorFirstItem">
             <h1>404</h1>
@@ -28,7 +28,7 @@ export default function Error() {
             </button>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

@@ -1,12 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../Components/Css/Login.css";
+
+
+const URL ="http://localhost:5000/api/v1/auth/login"
 
 export default function Login() {
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const inputHandler = (e) => {
     let name = e.target.name;
@@ -18,9 +23,29 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
+    try {
+      const loginResponse = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      if(loginResponse.ok){
+        setUser({email:"",password:""})
+        alert("login Succesfull");
+        navigate("/");
+      }else{
+        alert("Invalid Credential")
+        console.log("Invalid Credential");
+      }
+      console.log(loginResponse);
+    } catch (error) {
+      console.log("Error Occurs During Login", error);
+    }
   };
 
   return (
@@ -30,15 +55,23 @@ export default function Login() {
 
         <figure className="figureLoginContainer">
           <div className="LHStag">
-            <img src="/images/Loginimg.avif" alt="Registraion Form image" className="logimage"/>
+            <img
+              src="/images/Loginimg.avif"
+              alt="Registraion Form image"
+              className="logimage"
+            />
           </div>
         </figure>
 
         {/* ----LHS---- */}
 
         <main className="mainLoginContainer">
-          {/* <div className="headingContainer">
-            <h1>Login Page</h1>
+          <div className="loginheadingContainerTag">
+            <h1 className="loginHeadingWord">Login</h1>
+          </div>
+
+          {/* <div className="registerformHeadingTag">
+            <h1 className="headingWord">Registration</h1>
           </div> */}
 
           <div className="contentContainer">

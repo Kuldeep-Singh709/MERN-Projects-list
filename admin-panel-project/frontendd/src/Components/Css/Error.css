@@ -1,13 +1,14 @@
-.errorOuttercontainer{
+/* .errorOuttercontainer{
     display: grid;
     place-items: center; 
     height: 100vh;
-           background-color: black;
+    background-color: black;
     color: white;
-    max-width: 100vw;
+    max-width: 100%;
     height: 60vh;
-    padding: 2px;
-}
+     padding: 2px; 
+    border: 1px solid blue;
+} */
 
 .errorInnerContainer{
     /* border: 1px solid red; */
@@ -15,7 +16,13 @@
     flex-direction: column; 
     justify-content: center;
     align-items: center; 
-        height: 100%;
+        /* height: 100%; */
+        background-color: black;
+    color: white;
+    height: 100vh;
+
+
+
 }
 
 .errorItems{ 
@@ -35,7 +42,7 @@
     padding-right: 1em;
     background-color: gray;
     color: red;
-
+ /* border: 1px solid yellow; */
 }
 
 .errorFirstItem{}
@@ -43,7 +50,13 @@
 .errorSecondItem{
     background-color: #ffeaa7;
     color: black;
+ /* border: 1px solid purple; */
 }
+
+.errorSecondItem p{
+
+}
+
 
 .errorThirdItem{
     font-size: 1.5em;
@@ -52,6 +65,7 @@
     line-height: 1.26;
     background-color: #fab1a0;
     color: black;
+ /* border: 1px solid saddlebrown; */
 }
 
 .errorFourthItem{
@@ -111,3 +125,42 @@
     background-color: #0984e3;
     color: white;
 } */
+
+
+@media screen and (max-width:767px) {
+
+
+    .errorFirstItem h1{
+        font-size: 4em;
+        letter-spacing: 0.8rem;
+        word-spacing: 0.09rem;
+        line-height: 1.16;
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: gray;
+        color: red;
+     /* border: 1px solid yellow; */
+    }
+
+
+.errorSecondItem{
+    background-color: #ffeaa7;
+    color: black;
+    font-size: 0.9rem;
+ /* border: 1px solid purple; */
+}
+
+
+
+.errorThirdItem{
+    font-size: 1.5em;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.01rem;
+    line-height: 1.06;
+    background-color: #fab1a0;
+    color: black;
+ /* border: 1px solid saddlebrown; */
+}
+
+}
+    

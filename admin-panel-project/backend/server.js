@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const cors = require("cors");
 const connectDatabase = require("./config/database");
 const errorMiddleware = require("./middleware/errorMiddleware");
 
@@ -12,9 +13,16 @@ const errorMiddleware = require("./middleware/errorMiddleware");
   const contactRoute = require("./Routes/contactRoute");
 
 
-
 dotenv.config({ path:"backend/config/config.env" });
 
+//Handle Cors
+const corsOptions = {
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  methods:"GET, POST, PUT, DELETE, PATCH, HEAD",
+  Credentials:true,
+  optionsSuccessStatus: 200 ,
+}
+app.use(cors(corsOptions));
 
 app.use(express.json()); //When you send data to the server through an HTTP POST request with a JSON payload,
                         //  the express.json() middleware parses the JSON data and makes it available in the req.body object of the route handlers.
@@ -39,5 +47,4 @@ app.listen(process.env.PORT, (err) => {
 
 
 
-// app.use(errorMiddleware);
 
