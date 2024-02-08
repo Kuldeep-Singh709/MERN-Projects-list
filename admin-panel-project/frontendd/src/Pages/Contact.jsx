@@ -75,11 +75,13 @@ export default function Contact() {
           <div className="formRhs">
             <form onSubmit={contactSubmitHandler}>
               <div className="inputRHS">
-                <label htmlFor="uname">UserName</label>
+                {/* <label htmlFor="uname">UserName</label> */}
+                <label htmlFor="uname"></label>
                 <input
                   type="text"
                   id="uname"
                   name="username"
+                  placeholder="Enter UserName"
                   value={contact.username}
                   onChange={changeHandler}
                   autoComplete="off"
@@ -88,25 +90,29 @@ export default function Contact() {
                 
               </div>
               <div className="inputRHS">
-                <label htmlFor="email">Email</label>
+                {/* <label htmlFor="email">Email</label> */}
+                <label htmlFor="email"></label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={contact.email}
+                  placeholder="Enter Email"
                   onChange={changeHandler}
                   autoComplete="off"
                   required
                 />
               </div>
               <div className="inputRHS">
-                <label htmlFor="message">Message</label>
+                {/* <label htmlFor="message">Message</label> */}
+                <label htmlFor="message"></label>
                 <textarea
                   id="message"
                   // cols={30}
                   // rows={10}
                   value={contact.textareamessage}
                   onChange={changeHandler}
+                  placeholder="Enter Message"
                   // autoComplete="off"
                   // required
                 />

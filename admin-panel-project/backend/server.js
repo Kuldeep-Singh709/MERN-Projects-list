@@ -18,10 +18,12 @@ dotenv.config({ path:"backend/config/config.env" });
 //Handle Cors
 const corsOptions = {
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  // origin: '*',
   methods:"GET, POST, PUT, DELETE, PATCH, HEAD",
   Credentials:true,
   optionsSuccessStatus: 200 ,
 }
+
 app.use(cors(corsOptions));
 
 app.use(express.json()); //When you send data to the server through an HTTP POST request with a JSON payload,

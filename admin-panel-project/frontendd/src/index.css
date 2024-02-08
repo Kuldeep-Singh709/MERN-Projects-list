@@ -48,6 +48,7 @@ input[type=number]:focus,
 input[type=email]:focus {
     background-color: #ddd;
     outline: none;
+    border:1px solid rgba(246, 15, 15, 0.492);
 }
 
 
@@ -66,6 +67,15 @@ input::placeholder {
 input:focus::placeholder {
     color: transparent;
 }
+
+textarea::placeholder {
+  color: #bdc3c7;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+
 
 
 label {

@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../Store/Auth";
 import "../Components/Css/Login.css";
 
-
-const URL ="http://localhost:5000/api/v1/auth/login"
+const URL = "http://localhost:5000/api/v1/auth/login";
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -12,7 +12,8 @@ export default function Login() {
     password: "",
   });
   const navigate = useNavigate();
-
+  const {storeTokeninLocalStorage} = useAuth();
+  
   const inputHandler = (e) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -27,22 +28,24 @@ export default function Login() {
     e.preventDefault();
     console.log(user);
     try {
-      const loginResponse = await fetch(URL, {
+      const response = await fetch(URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(user),
       });
-      if(loginResponse.ok){
-        setUser({email:"",password:""})
+      if (response.ok) {
+        const res_data = await response.json();
+        storeTokeninLocalStorage(res_data.Token);  // Store Token in LocalHost,Here "storeTokeninLocalStorage" user Creted Function(Not a Built-in Function)
+        setUser({ email: "", password: "" });
         alert("login Succesfull");
         navigate("/");
-      }else{
-        alert("Invalid Credential")
+      } else {
+        alert("Invalid Credential");
         console.log("Invalid Credential");
       }
-      console.log(loginResponse);
+      // console.log(response);
     } catch (error) {
       console.log("Error Occurs During Login", error);
     }
