@@ -29,12 +29,17 @@
     color: #F8EFBA;
   }
   .logoName{
-    border: 0.5em solid white;
+    /* border: 0.5em solid white; */
+    /* border: 0.5em solid #B9CEEE; */
+    /* border: 0.5em solid gold; */
+    /* border: 0.5em solid #ffdd59; */
+    /* border: 0.5em solid #ffb142; */
+    border: 0.5em solid #ffda79;
     box-sizing: border-box;
     padding: 0.2em;
   }
   .logoName h1{
-    color: gold;
+    color: #B9CEEE;
     font-stretch:expanded;
     font-size: 2.7rem;
     font-weight:500;

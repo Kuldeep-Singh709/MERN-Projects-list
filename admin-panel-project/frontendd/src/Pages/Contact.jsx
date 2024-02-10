@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Components/Css/Contact.css";
+import { NavLink } from "react-router-dom";
 
 export default function Contact() {
   const [contact, setContact] = useState({
@@ -35,39 +36,19 @@ export default function Contact() {
             <h1>Contact Us</h1>
           </div> */}
           <div className="contactLHSsecond">
-            <div className="contacticonTag">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-instagram"></i>
-              </a>
-
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-facebook"></i>
-              </a>
-
-              <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-youtube"></i>
-              </a>
-
-              <a
-                href="https://twitter.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-twitter"></i>
-              </a>
-            </div>
+             <div className="contacticonTag">
+              <div className="contactLHScontentHeading">
+              <h1>Get In Touch</h1>
+              <p>We value your feedback and are always eager to hear from you. 
+              If you have any questions, suggestions, or inquiries, please don't hesitate to contact us.
+               Our friendly team is here to help!
+               </p>
+               </div>
+               <div className="contactLHSBTN">
+                  <button className="contactLHSBTNone"><NavLink to="/register" className={"contactNavLink"}>Get Start</NavLink></button>
+                  <button className="contactLHSBTNsecond"><NavLink to="/register" className={"contactNavLink"}>Get Next</NavLink></button>
+               </div>
+            </div> 
           </div>
         </div>
 

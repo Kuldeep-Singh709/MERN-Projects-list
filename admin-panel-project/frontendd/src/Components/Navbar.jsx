@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Css/Navbar.css"
+import "./Css/Navbar.css";
+import { useAuth } from "../Store/Auth";
+
 export default function Navbar() {
+  const { isLoggedIn } = useAuth();
+
   return (
     <>
       <header>
@@ -24,12 +28,34 @@ export default function Navbar() {
               <li>
                 <NavLink to="/service">Services</NavLink>
               </li>
-              <li>
-                <NavLink to="/register">Register</NavLink>
-              </li>
-              <li>
-                <NavLink to="/login">LogIn</NavLink>
-              </li>
+              {isLoggedIn ? (
+                <li>
+                  <NavLink to="/logout">Logout</NavLink>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <NavLink to="/register"> Register </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/login"> Login </NavLink>
+                  </li>
+                </>
+              )}
+              {/* {isLoggedIn ? (
+                <>
+                  <li>
+                    <NavLink to="/register">Register</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/login">LogIn</NavLink>
+                  </li>
+                </>
+              ) : (
+                <li>
+                  <NavLink to="/logout">Logout</NavLink>
+                </li>
+              )} */}
             </ul>
           </nav>
         </div>

@@ -1,96 +1,116 @@
-
 .sectionLoginContainer {
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100vw;
     height: 100vh;
-    /* max-height:fit-content; */
-    max-width: 100%;
-    padding: 0 20px 0 20px;
-    background-color: black;
-    /* border: 1px solid wheat; */
+    padding: 2px;
+    background-image: url("/images/BackgroundSecond.webp");
+    /* background-image: url("/images/Mapimage9.jpg");  */
 }
 
 .figureLoginContainer,
 .mainLoginContainer {
-    flex: 1;
-    background-color: black;
-    /* height:fit-content; */
     /* border: 1px solid darkmagenta; */
 }
 
-.LHStag{
-    /* border: 1px solid darkorange; */
+.figureLoginContainer {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    max-width: 100%;
-    height: 98%;
-    margin: 5px;
+    padding: 2px;
+
+    background-image: url("/images/loginImage6.jpg");
+    background-position: center;
+    /* background-image: url("/images/loginImage9.jpg"); background-position: center; */
+    /* background-image: url("/images/loginImage12.jpg");  background-position: center; background-position:right; */
+    opacity: 0.25;
+    /* opacity: 0.2; */
+    background-size: cover;
+    /* background-size:100%; */
+    /* background-position: center; */
+    /* background-position:right; */
+    /* background-position:left; */
 }
 
-.logimage{
+.LHStag {
+    /* border: 1px solid darkorange; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.LoginLHStagText {
+    /* opacity: none; */
+    /* color: white; */
+    background-color: rgba(223, 228, 234, 0.5);
+    margin-left: 2px;
+    /* display: ; */
+}
+
+.logimage {
     border: 3px solid black;
     border-radius: 28em;
     max-width: 100%;
     height: 70%;
 }
-.logimage img{
+
+.logimage img {
     max-width: 100%;
     height: 100%;
-/* border: 1px solid green; */
+    /* border: 1px solid green; */
 }
 
 
 
 .mainLoginContainer {
-    background-color: black;
     color: whitesmoke;
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center; */
+    /* border: 1px solid magenta; */
     /* height: 50%; */
-    /* height: fit-content; */
-    max-height: fit-content;
-    /* max-height:max-content; */
-
-    /* background-color: red; */
-
+    height: 100%;
 }
 
-.contentContainer {
-    border: 1px solid black;
-    /* width: 100%; */
+/* .LogincontentContainer */
+.LogincontentContainer {
+    /* border: 1px solid aqua; */
+    max-width: 100%;
+    max-height: 100%;
     margin-top: 6em;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height:100% ;
 }
 
-.formContainer {
+.LoginformContainer {
     /* border: 1px solid yellow; */
     width: 80%;
+    width: 60%;
     height: 100%;
-    padding:2em;
+    padding: 2em;
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 4px solid #ffda79;
-    background-color: #1e272e;
-    box-sizing: border-box;    
+    border: 4px solid rgb(255, 218, 121,0.5);
+    /* border: 5px solid rgb(0, 0, 255,0.5); */
+    background-color: rgba(255, 218, 121, 0.1);
+    /* background-color: #1e272e; */
+    box-sizing: border-box;
 }
 
-.logininputDIV{
+.logininputDIV {
     width: 100%;
     text-align: center;
     /* border: 1px solid yellow; */
 }
-.custom-input{
-    width: 60%;
+
+.custom-input {
+    width: 100%;
     margin: 1.5rem 0 1.5rem 0;
     border-radius: 8px;
     background: gray;
@@ -98,38 +118,43 @@
 
 
 .lgBtn {
-    margin: 2rem;
+    margin: 2em 0em 0.5em 0em;
     width: 100%;
 }
 
 .lgBtn button {
     padding: 0.5rem;
-    border: 1px solid dodgerblue;
     background-color: dodgerblue;
+    border: 2px solid white;
+    color: black;
     border-radius: 8px;
 }
 
 .lgBtn button:hover {
     cursor: pointer;
     background-color: darkcyan;
-    border: 1px solid #ff9f1a;
+    border: 2px solid #ff9f1a;
     color: white;
 }
 
 
 .loginheadingContainerTag {
 
-    background-color: black;
+    /* background-color: black; */
+
+    background-color: rgba(223, 228, 234, 0.2);
     padding: 10px;
-       max-height: 100%;
+    max-height: 100%;
     max-width: 100%;
     color: whitesmoke;
     margin-top: 2em;
     margin-left: 6em;
     margin-right: 6em;
     margin-bottom: 3rem;
-    border-top: 3px solid #ee5253 ;
-    border-bottom: 3px solid #ffb8b8;
+    border-top: 1px solid #ee5253;
+    border-bottom: 1px solid #ffb8b8;
+    /* border-top: 1px solid #ffb8b8;
+    border-bottom: 1px solid #ee5253 ; */
     border-radius: 40em;
     /* background-color: aqua; */
 }
@@ -138,6 +163,11 @@
     font-size: 2.5rem;
     margin: 0.1em;
     text-align: center;
+    /* font-size: 2.5em;
+    letter-spacing: 0.5rem;
+    line-height: 1.46;
+    word-spacing: 0.06rem;
+    margin-bottom: 1em; */
 }
 
 
@@ -145,33 +175,76 @@
 /* Media Query */
 
 @media screen and (max-width:767px) {
+    .sectionLoginContainer {
+        /* border: 1px solid red; */
+        padding: 0;
+        max-width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
 
-    .figureLoginContainer{
+    .mainLoginContainer {
+        /* border: 1px solid green;   */
+        width:100vw;  
+        /* max-width: 100%; */
+        height: 100%;
+        margin: 1em;
+        padding-top:2em;
+    }
+
+
+    .figureLoginContainer {
         display: none;
     }
-    .custom-input{
+
+    .LogincontentContainer {
+        /* border: 1px solid aqua; */
+        padding:1em;
+        max-width: 100%;
+
+    }
+
+    .LoginformContainer {
+        border: 5px solid rgb(0, 0, 255,0.5);
         width: 100%;
-     }
+        height:100%;
+    }
+
+.loginheadingContainerTag{
+    /* margin-top: 2em; */
+    /* border: 1px solid darkorange; */
+    padding: 0;
+    margin-top: 0;
+}
+
+
+.loginHeadingWord {
+    /* margin: 0.1em; */
+    /* padding:0.01em; */
+    text-align: center;
+    /* font-size: 1.8em; */
+    font-size: 2em;
+    letter-spacing: 0.4rem;
+    line-height: 1.46;
+    word-spacing: 0.04rem;
+    /* margin-bottom: 1em; */
+}
+    .custom-input {
+        width: 100%;
+    }
 }
 
 
 /* For screens between 768px and 1023px (tablets) */
 @media screen and (min-width: 767px) and (max-width: 950px) {
 
-    .figureLoginContainer{
+    .figureLoginContainer {
         display: none;
     }
-    .custom-input{
+
+    .custom-input {
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-

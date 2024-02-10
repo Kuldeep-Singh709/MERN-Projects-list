@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Store/Auth";
@@ -7,12 +7,14 @@ import "../Components/Css/Login.css";
 const URL = "http://localhost:5000/api/v1/auth/login";
 
 export default function Login() {
+
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
   const navigate = useNavigate();
-  const {storeTokeninLocalStorage} = useAuth();
+  const {storeTokenInLocalStorage , isLoggedIn} = useAuth();
+  const [isLoggedInA, setisLoggedInB] = useState(isLoggedIn)
   
   const inputHandler = (e) => {
     let name = e.target.name;
@@ -24,6 +26,7 @@ export default function Login() {
     });
   };
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
@@ -36,8 +39,8 @@ export default function Login() {
         body: JSON.stringify(user),
       });
       if (response.ok) {
-        const res_data = await response.json();
-        storeTokeninLocalStorage(res_data.Token);  // Store Token in LocalHost,Here "storeTokeninLocalStorage" user Creted Function(Not a Built-in Function)
+        const { Token } = await response.json();
+        storeTokenInLocalStorage(Token)
         setUser({ email: "", password: "" });
         alert("login Succesfull");
         navigate("/");
@@ -45,7 +48,6 @@ export default function Login() {
         alert("Invalid Credential");
         console.log("Invalid Credential");
       }
-      // console.log(response);
     } catch (error) {
       console.log("Error Occurs During Login", error);
     }
@@ -58,11 +60,12 @@ export default function Login() {
 
         <figure className="figureLoginContainer">
           <div className="LHStag">
-            <img
+            {/* <img
               src="/images/Loginimg.avif"
               alt="Registraion Form image"
               className="logimage"
-            />
+            /> */}
+            <h1 className="LoginLHStagText">Please Login First</h1>
           </div>
         </figure>
 
@@ -77,8 +80,8 @@ export default function Login() {
             <h1 className="headingWord">Registration</h1>
           </div> */}
 
-          <div className="contentContainer">
-            <form onSubmit={handleSubmit} className="formContainer">
+          <div className="LogincontentContainer">
+            <form onSubmit={handleSubmit} className="LoginformContainer">
               <div className="logininputDIV">
                 {/* <label htmlFor="email" /> */}
                 <input
@@ -118,3 +121,7 @@ export default function Login() {
     </>
   );
 }
+
+
+
+

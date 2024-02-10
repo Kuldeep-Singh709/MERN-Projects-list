@@ -1,0 +1,245 @@
+.aboutOutterTag{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    /* background-color: black; */
+    max-width: 100vw;
+    height: 100vh;
+    /* max-height: fit-content; */
+    padding: 0.5em;
+    background-image: url("/images/BackgroundSecond.webp");
+    /* background-size: cover; */
+    /* background-position: center; */
+}
+
+.aboutLHSsection,.aboutRHSsection{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.aboutOutterTag h1{
+    margin: 1em;
+}
+
+.aboutLHSsection{}
+.aboutRHSsection{}
+
+.aboutLHSinnersection{
+    /* border: 1px solid green; */
+    max-width: 80%;
+    height: 80%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+}
+.aboutLHSinnersection h1{
+    font-size: 2.5em;
+    letter-spacing: 0.5rem;
+    line-height: 1.46;
+    word-spacing: 0.06rem;
+    margin-bottom: 1em;
+    color: white;
+    border: 1px solid #ea8685;
+    background-color: rgba(189, 197, 129, 0.3);
+    /* background-color: rgba(252, 66, 123, 0.2); */
+}
+.aboutLHSinnersection p{
+    font-size: 1.5em;
+    letter-spacing: 0.2rem;
+    line-height: 1.46;
+    word-spacing: 0.02rem;
+    margin-bottom: 0.5em;
+    color: white;
+    background-color: rgba(223, 228, 234, 0.2);
+}
+.aboutRHSinnerSection{
+    /* border: 1px solid aqua; */
+    max-width: 80%;
+    height: 100%;
+    padding: 2px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aboutMissionTag{
+    /* border: 1px solid blue; */
+    max-width:100%;
+}
+
+.aboutVisionTag{
+    /* border: 1px solid blue; */
+    max-width:100%;
+}
+
+.aboutMissionTag h1{
+    font-size: 2.5em;
+    letter-spacing: 0.5rem;
+    line-height: 1.46;
+    word-spacing: 0.06rem;
+    margin-bottom: 1em;
+    color: white;
+    background-color: rgba(189, 197, 129, 0.3);
+    border: 1px solid #ea8685;
+}
+.aboutVisionTag h1{
+    font-size: 2.5em;
+    letter-spacing: 0.5rem;
+    line-height: 1.46;
+    word-spacing: 0.06rem;
+    margin-bottom: 1em;
+    color: white;
+    background-color: rgba(189, 197, 129, 0.3);
+    border: 1px solid #ea8685;
+}
+.aboutMissionTag p{
+    padding: 0.2em;
+    font-size: 1.5em;
+    letter-spacing: 0.2rem;
+    line-height: 1.36;
+    word-spacing: 0.02rem;
+    margin-bottom: 0.2em;
+    color: white;
+    background-color: rgba(223, 228, 234, 0.1);
+    /* border: 1px solid green; */
+}
+.aboutVisionTag p{
+    padding: 0.2em;
+    font-size: 1.5em;
+    letter-spacing: 0.2rem;
+    line-height: 1.36;
+    word-spacing: 0.02rem;
+    margin-bottom: 0.2em;
+    color: white;
+    background-color: rgba(223, 228, 234, 0.1);
+    /* border: 1px solid green; */
+}
+
+@media screen and (max-width:767px) {
+
+    
+.aboutOutterTag{
+    /* border:1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr; /* Create a single column grid */
+    grid-template-rows: auto auto; /* Define rows based on content */
+    max-width: 100%;
+    /* height: 100vh; */
+    height: fit-content;
+}
+
+.aboutLHSsection{
+    /* border:1px solid green; */
+    grid-row: 1 / 2; /* Span first row */
+    /* height:100vh; */
+    height: fit-content;
+    /* height:100%; */
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.aboutLHSinnersection{
+    /* border:1px solid yellow; */
+}
+.aboutRHSsection{
+    /* border:1px solid blue; */
+    grid-row: 2 / 3; /* Span second row */
+    /* height:100%; */
+    /* max-height:fit-content; */
+    max-width: 100%;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* margin-bottom: 2px; */
+}
+.aboutRHSinnerSection{
+    /* border:1px solid yellow; */
+}
+.aboutLHSinnersection p{
+    background-color: rgba(223, 228, 234, 0.1);
+}
+.aboutMissionTag{
+    /* border:1px solid aqua; */
+    max-height: fit-content;
+    height:fit-content;
+}
+.aboutVisionTag{
+    /* border:1px solid aquamarine; */
+    height: fit-content;
+}
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 850px){
+
+    
+.aboutOutterTag{
+    /* border:1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr; /* Create a single column grid */
+    grid-template-rows: auto auto; /* Define rows based on content */
+    max-width: 100%;
+    /* height: 100vh; */
+    height: fit-content;
+}
+
+.aboutLHSsection{
+    /* border:1px solid green; */
+    grid-row: 1 / 2; /* Span first row */
+    /* height:100vh; */
+    height: fit-content;
+    /* height:100%; */
+    width: 100%;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.aboutLHSinnersection{
+    /* border:1px solid yellow; */
+}
+.aboutRHSsection{
+    /* border:1px solid blue; */
+    grid-row: 2 / 3; /* Span second row */
+    /* height:100%; */
+    /* max-height:fit-content; */
+    max-width: 100%;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* margin-bottom: 2px; */
+}
+.aboutRHSinnerSection{
+    /* border:1px solid yellow; */
+}
+.aboutLHSinnersection p{
+    background-color: rgba(223, 228, 234, 0.1);
+}
+.aboutMissionTag{
+    /* border:1px solid aqua; */
+    max-height: fit-content;
+    height:fit-content;
+}
+.aboutVisionTag{
+    /* border:1px solid aquamarine; */
+    height: fit-content;
+}
+ }

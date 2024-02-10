@@ -9,6 +9,7 @@ import Navbar from "./Components/Navbar";
 import Fotter from "./Components/Fotter";
 import 'font-awesome/css/font-awesome.min.css';// Import the Font Awesome styles
 import Error from "./Pages/Error";
+import Logout from "./Pages/Logout";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/service" element={<Service />} />
           <Route path="*"  element={<Error/>} /> //WildCard Route
+          <Route path="/logout" element={<Logout/>}/>
         </Routes>
         <Fotter />
       </BrowserRouter>

@@ -12,7 +12,7 @@ export default function Register() {
   });
 
   const navigate = useNavigate();
-  const {storeTokeninLocalStorage} = useAuth();
+  const {storeTokenInLocalStorage} = useAuth();
   // // Add state variable for controlling popup visibility
   // const [showPopup, setShowPopup] = useState(false);
 
@@ -42,15 +42,11 @@ export default function Register() {
       );
 
       console.log(response);
-      // console.log(response.statusText);
-      // console.log(`Status:${response.status}`);
-      // console.log(`Success:${response.ok}`);
-      // console.log(`Url:${response.url}`);
-
+      
       // Check if registration was successful
       if (response.ok) {
         const res_data = await response.json();
-        storeTokeninLocalStorage(res_data.Token); // Store Token in LocalHost,Here "storeTokeninLocalStorage" user Creted Function(Not a Built-in Function)
+        storeTokenInLocalStorage(res_data.Token); // Store Token in LocalHost,Here "storeTokeninLocalStorage" user Creted Function(Not a Built-in Function)
         console.log("Server response Data :", res_data);
         setUser({
           username: "",
@@ -89,14 +85,19 @@ export default function Register() {
       )} */}
 
       <section className="registerSectionTag">
+      <div className="rsgisterLHStag">
         <figure className="registerfigureTag">
-          <img
+        
+          {/* <img
             src="/images/Registrationimg.jpg"
             alt="Registraion Form image"
             className="regimage"
-          />
+          /> */}
+          {/* <h1 className="RegisterLHStagText">Please Register First</h1> */}
         </figure>
-        <main className="registermainTag">
+        </div>
+        {/* <main className="registermainTag"> */}
+        <div className="registermainTag">
           <div className="registerformHeadingTag">
             <h1 className="registerheadingWord">Registration</h1>
           </div>
@@ -168,7 +169,7 @@ export default function Register() {
               </div>
             </form>
           </div>
-        </main>
+        </div>
       </section>
     </>
   );
