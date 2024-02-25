@@ -150,6 +150,18 @@
     width: 50%;
     border-radius: 8px;
     background-color: gray;
+    /* color: #c44569; */
+    color: black;
+}
+.inputRHS input:focus{
+    color: black;
+    /* color:white; */
+    background-color: gray;
+}
+.inputRHS input:hover{
+    /* color:#c44569; */
+    color: black;
+    /* background-color: red; */
 }
 .inputRHS label {
     margin: 0.3em;
@@ -162,6 +174,13 @@
     box-sizing: border-box;
     background-color: gray;
 }
+
+.inputRHS textarea:focus {
+    color:black;
+    background-color: burlywood;
+}
+
+
 .btncontactRHS {
     max-width: 100%;
     text-align: center;

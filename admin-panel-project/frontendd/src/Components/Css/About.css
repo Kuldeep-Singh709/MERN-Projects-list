@@ -8,6 +8,7 @@
     /* max-height: fit-content; */
     padding: 0.5em;
     background-image: url("/images/BackgroundSecond.webp");
+
     /* background-size: cover; */
     /* background-position: center; */
 }
@@ -123,6 +124,9 @@
     background-color: rgba(223, 228, 234, 0.1);
     /* border: 1px solid green; */
 }
+.aboutSpanfirst{
+    color:red;
+}
 
 @media screen and (max-width:767px) {
 
@@ -168,6 +172,7 @@
 }
 .aboutRHSinnerSection{
     /* border:1px solid yellow; */
+    margin-bottom: 2em;
 }
 .aboutLHSinnersection p{
     background-color: rgba(223, 228, 234, 0.1);
@@ -229,6 +234,7 @@
 }
 .aboutRHSinnerSection{
     /* border:1px solid yellow; */
+    margin-bottom: 2em;
 }
 .aboutLHSinnersection p{
     background-color: rgba(223, 228, 234, 0.1);
@@ -241,5 +247,6 @@
 .aboutVisionTag{
     /* border:1px solid aquamarine; */
     height: fit-content;
+    /* margin-bottom: em; */
 }
  }

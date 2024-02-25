@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Components/Css/Register.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Store/Auth";
+import { toast } from 'react-toastify';
 
 export default function Register() {
   const [user, setUser] = useState({
@@ -43,11 +44,13 @@ export default function Register() {
 
       console.log(response);
       
+      const res_data = await response.json(); // Convert Into JSON Format
+      console.log("Server response Data :", res_data);
+
       // Check if registration was successful
       if (response.ok) {
-        const res_data = await response.json();
+        
         storeTokenInLocalStorage(res_data.Token); // Store Token in LocalHost,Here "storeTokeninLocalStorage" user Creted Function(Not a Built-in Function)
-        console.log("Server response Data :", res_data);
         setUser({
           username: "",
           email: "",
@@ -60,10 +63,12 @@ export default function Register() {
         //   setShowPopup(false); // Hide the popup after 3 seconds
         // }, 3000);
 
-        alert("Registeration Successful");
+        toast.success("Registeration Successful");
         navigate("/login"); //After Successful Registration Navigate on Login Page
       } else {
         console.log("Registration failed.");
+      console.log("Server Response Error Data newwww :", res_data.message);
+      toast.warning(res_data.message);
       }
     } catch (error) {
       console.log("Error During Register :", error);
@@ -114,7 +119,7 @@ export default function Register() {
                   value={user.username}
                   id="uname"
                   autoComplete="off"
-                  required
+                  // required
                   onChange={handlerFunction}
                   className="inputregTag"
                 />
@@ -128,7 +133,7 @@ export default function Register() {
                   value={user.email}
                   id="email"
                   autoComplete="off"
-                  required
+                  // required
                   onChange={handlerFunction}
                   className="inputregTag"
                 />
@@ -142,7 +147,7 @@ export default function Register() {
                   value={user.phone}
                   id="ph"
                   autoComplete="off"
-                  required
+                  // required
                   onChange={handlerFunction}
                   className="inputregTag"
                 />
@@ -156,7 +161,7 @@ export default function Register() {
                   user={user.password}
                   id="pass"
                   autoComplete="off"
-                  required
+                  // required
                   onChange={handlerFunction}
                   className="inputregTag"
                 />

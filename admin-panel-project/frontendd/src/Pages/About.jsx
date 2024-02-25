@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+// import React, { useEffect, useState } from "react";
 // import '../Components/Css/Default.css';
 import "../Components/Css/About.css";
+import { useAuth } from "../Store/Auth";
+
 
 export default function About() {
+const {user} = useAuth();
+
+// const nameofUser =user.userData.username;
+// const nameofUser = user?.userData?.username;
+
+// console.log("uname1 :", user.userData.username);
+// console.log("uname1 :", user.userData.email);
+
+      // useEffect(()=>{
+      //   setuserName(
+      //     {userName:user.userData.username}
+      //   );
+      // })
   return (
     <>
       <div className="aboutOutterTag">
@@ -11,6 +26,8 @@ export default function About() {
             <h1>About Us</h1>
            <p>
               Welcome to our admin panel! We are dedicated to providing you with
+              {/* Welcome {user.userData.username}to our admin panel! We are dedicated to providing you with */}
+              {/* Welcome " <span className="aboutSpanfirst">{user.userData.username}</span> " to our admin panel! We are dedicated to providing you with */}
               the best tools and features to manage your business effectively.
               Our platform is designed to streamline your workflows, increase
               productivity, and drive success.
@@ -20,15 +37,10 @@ export default function About() {
 
         <div className="aboutRHSsection">
           <div className="aboutRHSinnerSection">
-            {/* <div className="aboutMissionTag">
-              <h1>Our Mission</h1>
-              <p>At [Your Company Name], our mission is to empower businesses of all sizes to thrive in the digital world. 
-              We believe in harnessing the power of technology to simplify complex tasks and enable growth opportunities for our clients.
-              </p>
-            </div> */}
+            
             <div className="aboutMissionTag">
             <h1>Our Mission</h1>
-              <p>At [Your Company Name], our mission is to empower businesses of all sizes to thrive in the digital world. 
+              <p>At Here, our mission is to empower businesses of all sizes to thrive in the digital world. 
               We believe in harnessing the power of technology to simplify complex tasks and enable growth opportunities for our clients.
               </p>
             </div>

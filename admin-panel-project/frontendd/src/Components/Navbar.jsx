@@ -8,8 +8,8 @@ export default function Navbar() {
 
   return (
     <>
-      <header>
-        <div className="container">
+      <header className="navbarHeaderClass">
+        <div className="navbarContainer">
           <div className="logoName">
             <h1>Admin Panel</h1>
           </div>
@@ -42,20 +42,6 @@ export default function Navbar() {
                   </li>
                 </>
               )}
-              {/* {isLoggedIn ? (
-                <>
-                  <li>
-                    <NavLink to="/register">Register</NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/login">LogIn</NavLink>
-                  </li>
-                </>
-              ) : (
-                <li>
-                  <NavLink to="/logout">Logout</NavLink>
-                </li>
-              )} */}
             </ul>
           </nav>
         </div>

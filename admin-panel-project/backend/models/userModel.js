@@ -2,33 +2,34 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
-    require: [true, "Please Enter Your Name"],
-    maxLength: [30, "Name cannot exceed 30 characters"],
-    minLength: [4, "Name should have more than 4 characters"],
+    required: [true, "Please Enter Your Name"],
+    maxLength: [30, "User Name cannot exceed upto 30 characters"],
+    minLength: [4, "User Name should have more than 4 characters"],
   },
   email: {
     type: String,
-    required: [true, "Please Enter Your Email"],
+    required: [true, "Email is Required"],
     unique: true,
     maxLength: [30, "Email cannot exceed 30 characters"],
     minLength: [4, "Email should have more than 4 characters"],
     // validate: [validator.isEmail, "Please Enter a valid Email"],
   },
-  password: {
+  phone: {
+    // type: Number,
     type: String,
-    require: [true, "Please Enter Password"],
+    required: [true, "Contact Number Required"],
+    minLength: [9, "Phone Number should have more than 9 characters"],
+    maxLength: [15, "Phone Number cannot exceed 15 characters"],
+  },
+   password: {
+    type: String,
+    required: [true, "Password is Required"],
     minLength: [8, "Password should be greater than 8 characters"],
     // select: false,
-  },
-  phone: {
-    type: Number,
-    // type: String,
-    require: [true, "Please Enter Your COntact Number"],
-    maxLength: [15, "Phone Number cannot exceed 15 characters"],
-    minLength: [9, "Phone Number should have more than 9 characters"],
   },
   role: {
     type: String,
@@ -54,7 +55,7 @@ userSchema.methods.comparePassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 }; //Do Not Use Arrow Function Here BZ "Arrow" function does not have "This" keyword
 
-//JWT Token (JWT always Has three part Hearder,Payload,Signature)and (we Always created Payload and Signature inside the .SIGN() method)
+//JWT Token (JWT always Has three part Hearder,Payload,Signature)and (we Always created Payload and Signature inside the .SIGN() method
 
 userSchema.methods.generateJWTToken = async function () {
   try {

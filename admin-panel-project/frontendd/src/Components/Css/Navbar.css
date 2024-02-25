@@ -1,11 +1,17 @@
-.container{
+.navbarHeaderClass{
+  /* background-image: url("/images/BackgroundFirst.webp"); */
+  background-image: url("/images/BackgroundThird.jpg");
+}
+
+.navbarContainer{
     max-width: 140rem;
     padding: 2rem 1.4rem;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: rgb(0, 0, 0,0.8);
+    /* background-image: url("/images/BackgroundFirst.webp"); */
 }
-
+/* .navbarContainer */
 .navbarLink ul{
     display: flex;
     gap: 3.2rem;
@@ -62,7 +68,7 @@
 
 /* For screens smaller than 768px (phones) */
 @media screen and (max-width: 767px) {
-  .container {
+  .navbarContainer {
       padding: 1rem;
       flex-direction: column; 
       align-items: center;  
@@ -87,7 +93,7 @@
 
 /* For screens between 768px and 1023px (tablets) */
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .container {
+  .navbarContainer {
   flex-direction: column; 
   align-items: center;  
       padding: 1.5rem;

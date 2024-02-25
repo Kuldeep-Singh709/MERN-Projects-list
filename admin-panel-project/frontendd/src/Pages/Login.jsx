@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../Store/Auth";
 import "../Components/Css/Login.css";
+import { toast } from 'react-toastify';
 
 const URL = "http://localhost:5000/api/v1/auth/login";
 
@@ -14,7 +15,7 @@ export default function Login() {
   });
   const navigate = useNavigate();
   const {storeTokenInLocalStorage , isLoggedIn} = useAuth();
-  const [isLoggedInA, setisLoggedInB] = useState(isLoggedIn)
+  // const [isLoggedInA, setisLoggedInB] = useState(isLoggedIn)
   
   const inputHandler = (e) => {
     let name = e.target.name;
@@ -29,7 +30,8 @@ export default function Login() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
+    // console.log("Before try Block of Loginjsx");
     try {
       const response = await fetch(URL, {
         method: "POST",
@@ -38,14 +40,19 @@ export default function Login() {
         },
         body: JSON.stringify(user),
       });
+    
+      // console.log("Login Response:",response);
+
       if (response.ok) {
         const { Token } = await response.json();
         storeTokenInLocalStorage(Token)
         setUser({ email: "", password: "" });
-        alert("login Succesfull");
+        // alert("login Succesfull");
+        toast.success("Successfully Logged In");
         navigate("/");
       } else {
-        alert("Invalid Credential");
+        // alert("Invalid Credential");
+        toast.error("Invalid Credential");
         console.log("Invalid Credential");
       }
     } catch (error) {

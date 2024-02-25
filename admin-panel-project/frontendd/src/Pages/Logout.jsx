@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../Store/Auth";
+import { toast } from 'react-toastify';
+
 
 
 // export const Logout=()=>{
 
 export default function Logout() {
   const { LogoutUser } = useAuth();
-  console.log("Inside Logout FUnction");
   useEffect(() => {
-  console.log("Inside Logout FUnction222");
-
     LogoutUser();
+    toast.info("Successfully Logged out");
   }, [LogoutUser]);
 
   return <Navigate to="/login" />;
