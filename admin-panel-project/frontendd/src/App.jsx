@@ -10,6 +10,9 @@ import Fotter from "./Components/Fotter";
 import 'font-awesome/css/font-awesome.min.css';// Import the Font Awesome styles
 import Error from "./Pages/Error";
 import Logout from "./Pages/Logout";
+import AdminLayout from "./Components/Layouts/AdminLayout";
+import AdminUsers from "./Pages/AdminUsers";
+import AdminContacts from "./Pages/AdminContacts";
 
 
 function App() {
@@ -26,6 +29,10 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path="*"  element={<Error/>} /> //WildCard Route
           <Route path="/logout" element={<Logout/>}/>
+          <Route path="/admin" element={<AdminLayout/>}> {/* Nested Routes of Admin */}
+            <Route path="users" element={<AdminUsers/>}/>
+            <Route path="contacts" element={<AdminContacts/>}/>
+          </Route>
         </Routes>
         <Fotter />
       </BrowserRouter>

@@ -1,0 +1,267 @@
+/* .adminUserOutterdiv{
+    border: 1px solid red;
+    background-color: black;
+    color: goldenrod;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.adminUserInnerdiv{
+    border: 1px solid aqua;
+    width: 100%;
+    height: 100%;
+}
+tbody{
+}
+tr{
+    background-color: white;
+}
+.adminusermapTR{
+    background-color: red;
+    border: 5px solid aqua;
+
+}
+th{
+    color: black;
+}
+td{
+    color: gray;
+} */
+
+
+/* 
+.adminUserOutterdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: goldenrod;
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .adminUserInnerdiv {
+    width: 80%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .adminUserHeadingTR {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .adminUserHeadingTH,
+  .adminUserMapTD {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .adminUserMapTD {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .adminUserMapTR:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .adminUserMapTR:hover {
+    background-color: #ddd;
+  }
+   */
+
+
+
+
+
+
+
+
+/* Default.css */
+
+/* .adminUserOutterdiv {
+    display: grid;
+    place-items: center;   
+    border: 1px solid red;
+}
+
+.adminUserInnerdiv {
+    width: 80%;
+    margin-top: 20px;
+    border: 1px solid blueviolet;
+    background-color: rgb(238, 130, 238, 0.5);
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(165, 42, 42,0.5);
+    border: 1px solid yellow;
+    margin: 3px;
+    padding: 2px;
+}
+
+.adminUserHeadingTR {
+    background-color: black;
+    color: white;
+}
+
+.adminUserHeadingTH{
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.adminUserMapTD {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid blue;
+}
+
+.adminUserMapDiv {
+    margin-bottom: 10px;
+    border: 1px solid red;
+    width: 100%;
+}
+
+.adminUserMapTR {
+    background-color: white;
+    width: 100%;
+}
+
+.adminUserMapTDfirst {
+    width: 20%;
+}
+
+.adminUserMapTDsecond {
+    width: 20%;
+}
+
+.adminUserMapTDthird {
+    width: 20%;
+}
+
+.adminUserMapTDfour,
+.adminUserMapTDfive {
+    width: 10%;
+}
+
+.aaaa {
+    border: 1px solid blue;
+    background-color: rgb(255, 99, 71, 0.5);
+}
+
+.adminuserTbody {
+    border: 1px solid green;
+    background-color: rgb(222, 184, 135, 0.4);
+    padding: 10px;
+    width: 100%;
+} */
+
+
+
+
+.adminUserOutterdiv {
+    display: grid;
+    place-items: center;   
+    border: 1px solid red;
+}
+.adminUserInnerdiv {
+    width: 90%;
+    margin-top: 20px;
+    border: 1px solid blueviolet;
+    /* background-color: rgb(238, 130, 238, 0.5); */
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: center;
+  }
+  
+  th {
+    /* background-color: #f2f2f2; */
+    background-color: black;
+    border: 1.5px solid gray;
+    color: white;
+    /* border-collapse: collapse; */
+
+  }
+
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* tr:hover {
+    background-color: #ddd;
+  } */
+  
+
+.adminUserDeleteBTN{
+    padding: 5px 10px;
+    background-color: brown;
+    /* color: grey; */
+    color: wheat;
+    border: none;
+    border-radius:4px;
+    border-radius:1em;
+    cursor: pointer;
+}
+
+.adminUserDeleteBTN:hover{
+    background-color: red;
+}
+.adminUserDeleteTag:hover{
+    /* background-color: rgb(255, 255, 255,0.1); */
+}
+
+.adminUserEditBTN{
+    padding: 5px 10px;
+    background-color: yellowgreen;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.adminUserEditBTN:hover{
+    background-color: green;
+}
+
+.adminUserEditTag:hover{
+    /* background-color:p; */
+}
+  
+  /* button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  } */
+  
+  .totalUserHeading{
+    max-width: fit-content;
+    background-color: #f8a5c2;
+    color: #1e272e;
+    padding: 0.5em;
+    margin: 0.5em;
+  }

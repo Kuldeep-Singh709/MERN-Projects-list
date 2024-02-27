@@ -12,6 +12,8 @@ const errorMiddleware = require("./middleware/errorMiddleware");
   const authRoute = require("./Routes/authRoute");
   const contactRoute = require("./Routes/contactRoute");
   const serviceRoute = require("./Routes/serviceRoute");
+  const adminRoute = require("./Routes/adminRoute");
+
 
 dotenv.config({ path:"backend/config/config.env" });
 
@@ -33,6 +35,9 @@ app.use(express.json()); //When you send data to the server through an HTTP POST
 app.use("/api/v1",authRoute);
 app.use("/api/v2",contactRoute);
 app.use("/api/v3",serviceRoute);
+//Admin Routes
+app.use("/api/admin",adminRoute);
+
 
 
 connectDatabase();

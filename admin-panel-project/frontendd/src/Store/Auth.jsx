@@ -74,7 +74,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [Token, setToken] = useState(() => localStorage.getItem("Token")); // Use "getItem()" for Remove or get your Saved or Store Token from LocalStorge
   const [user, setUser] = useState("");
-
+ const authoritionToken = `Bearer ${Token}`;
   useEffect(() => {
     handleStorageChange();
   },[]);
@@ -85,7 +85,7 @@ const responseFetch = async (Token) => {
     const response = await fetch("http://localhost:5000/api/v1/userdata", {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${Token}`,
+        Authorization: authoritionToken ,
       },
     });
     
@@ -130,6 +130,9 @@ const handleStorageChange = () => {
     setToken("");
   };
 
+  //Delete a User 
+
+
 
 const userAuthenctication = async () => {
   try {
@@ -145,7 +148,7 @@ const userAuthenctication = async () => {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn, storeTokenInLocalStorage, LogoutUser, user }}
+      value={{ isLoggedIn, storeTokenInLocalStorage, LogoutUser, user ,authoritionToken }}
     >
       {children}
     </AuthContext.Provider>
