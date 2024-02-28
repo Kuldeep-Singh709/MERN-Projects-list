@@ -13,6 +13,7 @@ import Logout from "./Pages/Logout";
 import AdminLayout from "./Components/Layouts/AdminLayout";
 import AdminUsers from "./Pages/AdminUsers";
 import AdminContacts from "./Pages/AdminContacts";
+import AdminUserUpdate from "./Pages/AdminUserUpdate";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/admin" element={<AdminLayout/>}> {/* Nested Routes of Admin */}
             <Route path="users" element={<AdminUsers/>}/>
             <Route path="contacts" element={<AdminContacts/>}/>
+            <Route path="users/singleuser/:id/edit" element={<AdminUserUpdate/>}/>
           </Route>
         </Routes>
         <Fotter />

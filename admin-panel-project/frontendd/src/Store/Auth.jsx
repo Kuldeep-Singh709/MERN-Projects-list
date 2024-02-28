@@ -130,7 +130,8 @@ const handleStorageChange = () => {
     setToken("");
   };
 
-  //Delete a User 
+  //Edit a user
+  const editUserById=async(id)=>{ }
 
 
 
@@ -148,7 +149,7 @@ const userAuthenctication = async () => {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn, storeTokenInLocalStorage, LogoutUser, user ,authoritionToken }}
+      value={{ isLoggedIn, storeTokenInLocalStorage, LogoutUser, user ,authoritionToken, editUserById }}//Color of Function Show differntlly--->"Yellow Color"
     >
       {children}
     </AuthContext.Provider>

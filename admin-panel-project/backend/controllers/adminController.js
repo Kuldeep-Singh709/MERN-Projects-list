@@ -24,6 +24,7 @@ exports.getAllUser = async(req,res,next)=>{
     }
 }
 
+
 exports.getAllContacts= async(req,res,next)=>{
 
     try {
@@ -46,13 +47,51 @@ exports.getAllContacts= async(req,res,next)=>{
     }
 }
 
-exports.deleteSingleUser=(req,res,next)=>{
+exports.deleteSingleUserByID= async(req,res,next)=>{
 
     try {
         
+        const id = req.params.id;
+        const deletedUser = await User.findByIdAndDelete({_id:id});
+        console.log("User Deleted Successfully",deletedUser);
+        res.status(200).json({message:"user Deleted Successfully"})
         
     } catch (error) {
-        console.log("Error During Deleteing a User",error);
+        console.log("Error During Deleteing a User by Admin",error);
         
+    }
+}
+
+
+exports.getSingleUserByID=async(req,res,next)=>{
+    try {
+
+        const id = req.params.id;
+        const user = await User.findById({_id:id},{password:0});
+        res.status(200).json({user});
+
+    } catch (error) {
+        console.log("Error During Getting a Single User Data by Admin",error);
+        res.status(404).json({error});
+    }
+}
+
+
+exports.updateUserByID=async(req,res,next)=>{
+
+    try {
+
+        const id = req.params.id;
+        const updateUserData = req.body;
+    
+        const changedUserData = await User.updateOne({_id:id},{
+            $set:updateUserData,
+        });
+        
+        return res.status(200).json(changedUserData);
+        
+    } catch (error) {
+        console.log("Error During Updateing or Editing a User Data by Admin",error);
+        res.status(404).json({error});    
     }
 }

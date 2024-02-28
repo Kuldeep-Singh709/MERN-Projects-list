@@ -1,0 +1,109 @@
+.adminUserUpadteOutterDiv {
+    display: grid;
+    place-items: center;
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgb(30, 144, 255, 0.4);
+    background-color:rgb(9, 132, 227,0.7);
+    border: 1px solid red;
+}
+
+.adminUserUpadteInnerDiv {
+    border: 2px solid black;
+    border-radius: 1em;
+    width: 70%;
+    height: 80%;
+    /* height:fit-content; */
+    padding: 1em;
+    background-color: rgb(34, 47, 62, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* align-self: center; */
+    align-items: center;
+    /* justify-items: center; */
+}
+.adminuserObjectIdtag{
+    /* border: 1px solid red; */
+    background-color: rgb(210, 180, 140,0.2);
+    border-radius: 1em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-top:0.2em;
+    padding-bottom:0.2em;
+    margin-bottom: 1em;
+    color: wheat;
+    color: black;
+}
+.adminuserObjectIdtagSpan{
+    color: black;
+    color: white;
+    letter-spacing: 0.1em;
+
+}
+.adminuserObjectIdtagSpanSecond{
+    color: brown;
+    font-size: 1em;
+}
+
+.AdminUserUpdateFormTag {
+    border: 5px solid rgb(255, 255, 0,0.3);
+    border-radius: 0.4em;
+    margin: 1em;
+    padding: 1em;
+    background-color: rgb(236, 204, 104, 0.3);
+}
+
+.adminuserInputDivs input[type=text],
+.adminuserInputDivs input[type=password],
+.adminuserInputDivs input[type=number],
+.adminuserInputDivs input[type=email] {   
+    border:1px solid rgb(255, 255, 255,0.2);
+    border-radius: 0.6em;
+    background-color: rgb(88, 177, 159,0.1);
+}
+.adminuserInputDivs input[type=text]:focus,
+.adminuserInputDivs input[type=password]:focus,
+.adminuserInputDivs input[type=number]:focus,
+.adminuserInputDivs input[type=email]:focus {
+    background-color: rgb(255, 184, 184,0.3);
+    outline: none;
+    border: 0.02em solid #fff200;
+}
+
+input::placeholder {
+    color: black;
+}
+
+
+.adminuserLabel {
+    margin: 0.2em;
+    color: white;
+}
+
+.adminuserUpdateBTN {
+    /* border: 1px solid aqua; */
+    margin-top: 1em;
+    text-align: center;
+}
+
+.adminuserUpdateBTN button {
+    padding: 0.1em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    font-size: 1.2em;
+    letter-spacing: 0.04em;
+    border: 1px solid red;
+    border: 1px solid white;
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: rgba(183, 21, 64,1.0);
+}
+
+.adminuserUpdateBTN button:hover{
+    background-color: #e55039;
+    border:1px solid #fff200;
+    color: wheat;
+}
