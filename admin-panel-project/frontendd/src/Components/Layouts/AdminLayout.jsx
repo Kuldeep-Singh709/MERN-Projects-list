@@ -21,7 +21,7 @@ function AdminLayout() {
                     <li><NavLink to={"/admin/users"}><HiUserGroup />Users</NavLink></li>
                 </ul>
                 <ul>
-                    <li><NavLink to={"/admin/contacts"}><FaRegMessage />Contacts</NavLink></li>
+                    <li><NavLink to={"/admin/users/contacts"}><FaRegMessage />Contacts</NavLink></li>
                 </ul>
                 <ul>
                     <li><NavLink to={"/"}><AiTwotoneHome />Home</NavLink></li>

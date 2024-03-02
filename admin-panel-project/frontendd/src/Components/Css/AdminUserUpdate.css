@@ -49,11 +49,13 @@
 }
 
 .AdminUserUpdateFormTag {
-    border: 5px solid rgb(255, 255, 0,0.3);
+    /* border: 5px solid rgb(255, 255, 0,0.3); */
+    border: 5px solid  rgb(236, 204, 104, 0.3);
     border-radius: 0.4em;
     margin: 1em;
     padding: 1em;
-    background-color: rgb(236, 204, 104, 0.3);
+    background-color: rgb(236, 204, 104, 0.4);
+    /* background-color:rgb(255, 255, 0,0.4); */
 }
 
 .adminuserInputDivs input[type=text],

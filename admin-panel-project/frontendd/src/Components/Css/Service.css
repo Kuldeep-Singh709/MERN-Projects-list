@@ -9,7 +9,7 @@
 }
 
 .serviceInnertag {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     width: 95%;
     max-height: fit-content;
     display: flex;

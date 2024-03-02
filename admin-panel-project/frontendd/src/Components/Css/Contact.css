@@ -170,9 +170,13 @@
     margin: 1.5rem 0 1.5rem 0;
     width: 50%;
     height: 7em;
+    padding: 2px;
     border: 2px solid gray;
+    border-radius: 4px;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: rgb(128, 128, 128,0.6);
+    resize: none;
+    overflow-y: scroll;
 }
 
 .inputRHS textarea:focus {

@@ -32,7 +32,7 @@ function App() {
           <Route path="/logout" element={<Logout/>}/>
           <Route path="/admin" element={<AdminLayout/>}> {/* Nested Routes of Admin */}
             <Route path="users" element={<AdminUsers/>}/>
-            <Route path="contacts" element={<AdminContacts/>}/>
+            <Route path="users/contacts" element={<AdminContacts/>}/>
             <Route path="users/singleuser/:id/edit" element={<AdminUserUpdate/>}/>
           </Route>
         </Routes>
