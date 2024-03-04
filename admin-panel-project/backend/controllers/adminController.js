@@ -47,6 +47,19 @@ exports.getAllContacts= async(req,res,next)=>{
     }
 }
 
+exports.deleteSingleContactByID= async(req,res,next)=>{
+    try {
+
+        const id = req.params.id;
+        const  response = await Contact.findByIdAndDelete({_id:id});
+        console.log("Contact Deleted SuccessFully",response);
+        res.status(200).json({message:"Contact Deleted Successfully"});
+    } catch (error) {
+        console.log("Error During Deleteing a Contact from the DataBase",error);
+        return next(new Error("Deleting a Contact Went Wrong..", 401));
+    }
+}
+
 exports.deleteSingleUserByID= async(req,res,next)=>{
 
     try {
@@ -58,6 +71,7 @@ exports.deleteSingleUserByID= async(req,res,next)=>{
         
     } catch (error) {
         console.log("Error During Deleteing a User by Admin",error);
+        return next(new Error("Deleting A single User's Went Wrong..", 401));
         
     }
 }
@@ -73,6 +87,7 @@ exports.getSingleUserByID=async(req,res,next)=>{
     } catch (error) {
         console.log("Error During Getting a Single User Data by Admin",error);
         res.status(404).json({error});
+        return next(new Error("Fetching A Single User Went Wrong..", 401));
     }
 }
 
@@ -93,5 +108,7 @@ exports.updateUserByID=async(req,res,next)=>{
     } catch (error) {
         console.log("Error During Updateing or Editing a User Data by Admin",error);
         res.status(404).json({error});    
+        return next(new Error("updating A Single User by ID Went Wrong..", 401));
+
     }
 }

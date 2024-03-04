@@ -1,29 +1,73 @@
-.adminContactOutterDiv{
-    border: 1px solid red;
-    /* height: 100vh; */
+.adminContactOutterDiv {
+    /* border: 1px solid red; */
     max-height: fit-content;
     max-width: 100vw;
     padding: 2em;
+    background-color: rgba(189, 197, 129, 0.6);
+    display: grid;
+    place-items: center;
+    /*Centers both horizontally and vertically */
 
 }
-.adminContactInnerDiv{
-    border: 1px solid green;
-    width:100%;
-    /* width:fit-content; */
+
+.adminContactinputDiv input[type=text] {
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    border: 1px solid rgb(0, 0, 0, 0.6);
+    border-radius: 1em;
+    /* background-color: rgb(88, 177, 159,0.1); */
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.adminContactinputDiv input[type=text]:hover::placeholder {
+    color: rgb(255, 255, 255, 0.7);
+}
+
+.adminContactinputDiv input[type=text]:hover {
+    background-color: rgb(234, 134, 133, 0.1);
+    border: 1px solid rgb(216, 112, 147, 0.5);
+    color: black;
+}
+
+.adminContactinputDiv input[type=text]:focus {
+    background-color: white;
+    outline: none;
+    border: 1px solid #fff200;
+}
+
+.adminContactInnerDiv {
+    /* border: 1px solid green; */
+    padding-top: 3em;
+    padding-bottom: 2em;
+    width: 100%;
     max-height: fit-content;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: center; 
-    gap: 10px; */
+    border-radius: 1em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: rgba(189, 197, 129, 0.6);
+}
 
+
+.adminContactspinnerContainer{
+    width: 100%;
+    height: 70vh;
+    max-height: fit-content;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(189, 197, 129, 0.6);
+    color: blue;
+}
+.adminContactSpinnerIcon{
+    font-size: 4em;
 }
 
 .adminContactCardData {
     /* border: 1px solid yellow; */
-    /* background-color: cadetblue; */
     box-sizing: border-box;
     color: white;
     padding: 0.5em;
@@ -31,123 +75,183 @@
     text-align: center;
     max-width: fit-content;
     height: fit-content;
-    /* background-color: rgb(255, 255, 255,0.2);  */
-    background-color: rgba(223, 228, 234, 0.1);
-    /* border: 1px solid rgb(255, 255, 255,0.1); */
+    /* background-color: rgb(255, 255, 255, 0.2);
+    background-color: rgba(223, 228, 234, 0.6);
+    background-color: rgb(255, 255, 255,0.9);
+    background-color: rgba(248, 239, 186,0.9); */
+    background-color: rgba(248, 194, 145, 0.8);
+    margin: 1em 1.5em 0.5em 0;
     border-radius: 1em;
-    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  */
-    /* border: 1px solid #e0e0e0;  */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .adminContactCardUpper {
-    /* background-color: rgb(233, 150, 122,0.6); */
-    /* background-color: rgb(234, 32, 39,0.5); */
-    background-color: rgb(245, 205, 121, 0.2);
-    /* background-color: rgb(248, 165, 1940,0.2); */
-    /* background-color: rgb(247, 143, 179,0.2); */
-    /* background-color: rgb(162, 155, 254,0.5); */
-    background-color: rgb(255, 118, 117, 0.5);
-
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(44, 58, 71, 0.4);
     border: 2px solid #ea8685;
     border-bottom: none;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    /* height: 8em; */
     height: fit-content;
-    width: fit-content;
     width: 25em;
-    /* text-align: center; */
-    /* display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center; */
-}
-.adminContactCardUpperInner{
-    max-width: 100%;
-    max-height: 100%;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid red;
-}
-
-.adminContactCardupperHeading{
-    margin: 0.2em;
-}
-
-.adminContactCardupperHeadingID{
-    border: 1px solid blue;
-
-}
-.adminContactCardupperHeadingUSERNAME{
-    border: 1px solid yellow;
-
-}
-.adminContactCardupperHeadingNAME{
-    border: 1px solid green;
-
 }
 
 .adminContactCardLowwer {
     padding: 0.5em;
-    /* padding-bottom:1em; */
-    /* background-color: rgb(45, 52, 54,0.8); */
-    /* background-color: rgb(204, 174, 98,0.7); */
-    /* background-color: rgb(209, 204, 192,0.4); */
-    background-color: rgb(44, 58, 71, 0.5);
+    background-color: rgba(255, 218, 121, 0.7);
     border: 2px solid #ea8685;
     border-top: none;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    color: white;
+    color: black;
     width: 25em;
-    /* height: 15em; */
     min-height: 10em;
-    /* max-height: 10em;
-    overflow: hidden; 
-    position: relative;  */
-/* overflow-y: scroll; */
-    /* max-height: fit-content; */
-    /* max-height: ; */
-
-    /* display: grid;
-    place-items: center; */
-    /* Centers both horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
+.adminContactCardUpperInner {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 5px;
+}
+
+.adminContactCardupperHeading {
+    margin: 0.2em;
+}
+
+.adminContactCardupperHeadingID {
+    /* border: 1px solid blue; */
+    background-color: rgb(210, 180, 140, 0.2);
+    background-color: rgb(246, 185, 59, 0.3);
+    border-radius: 1em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+    color: wheat;
+
+}
+
+.adminContactCardupperHeadingUSERNAME {
+    /* border: 1px solid yellow; */
+    width: 100%;
+    background-color: rgba(50, 255, 126, 0.2);
+    border-radius: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+    color: black;
+}
+
+.adminContactCardupperHeadingNAME {
+    /* border: 1px solid green; */
+    width: 100%;
+    background-color: rgba(255, 204, 204, 0.3);
+    /* background-color: rgb(246, 185, 59, 0.25); */
+    border-radius: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.1em;
+    color: black;
+}
 
 .adminContactCardLowwerInner {
-    border: 1px solid aqua;
-    max-width: 100%;
-    height: 100%;
-        display: grid;
-    place-items: center;
-    /* Centers both horizontally and vertically */
-
+    width: 100%;
+    min-height: 5em;
+    padding: 1em;
 }
-.adminContactCardLowwerInnerPara{
-    margin: 0;
-    padding: 0;
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .adminContactCardLowwerInnerParaMore {
-    display: none; /* Initially hide the "more" text */
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: white; /* Match background color */
     cursor: pointer;
-    color: blue; /* Or any color you prefer */
-  }
-  
-  .expanded .adminContactCardLowwerInnerParaMore {
-    display: block; /* Show the "more" text when card is expanded */
-  }
-  
+    color: blue;
+    text-decoration: underline;
+}
+
+.adminContactCardLowwerInnerParaMore:hover {
+    color: dodgerblue;
+}
+
 .adminContactCardLowwerInner p {
     font-size: 1em;
     letter-spacing: 0.025rem;
-    line-height:normal;
+    line-height: normal;
     word-spacing: 0.08rem;
     text-align: center;
 }
+
+.adminContactCardupperHeadingSpanFirst {
+    color: black;
+}
+
+.adminContactCardupperHeadingSpanSecond {
+    color: brown;
+}
+
+
+.adminContactCardDeleteBTN {}
+
+
+
+
+.adminContactCardDeleteBTN {
+    /* border: 1px solid aqua; */
+    margin-top: 1em;
+    /* padding: 1em; */
+    text-align: center;
+}
+
+.adminContactCardDeleteBTN button {
+    padding: 0.4em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    font-size: 1.2em;
+    letter-spacing: 0.04em;
+    border: 1px solid red;
+    border: 1px solid white;
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: rgba(183, 21, 64, 1.0);
+}
+
+.adminContactCardDeleteBTN button:hover {
+    background-color: #e55039;
+    border: 1px solid #fff200;
+    color: wheat;
+}
+
+
+.totalContactHeadingOutter{
+    width: 100%;
+}
+.ContactUserSpan {
+    color: #7158e2;
+    color: #0984e3;
+}
+
+.totalContactHeading {
+    max-width: fit-content;
+    background-color: #f8a5c2;
+    background-color: #F8EFBA;
+    background-color: rgb(189, 197, 129, 0.5);
+    border: 2px solid white;
+    transition: linear;
+    color: #222f3e;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+

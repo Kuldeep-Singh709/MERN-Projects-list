@@ -1,107 +1,126 @@
 .adminUserOutterdiv {
-    display: grid;
-    place-items: center;  
-    background-color: rgb(0, 0, 0,1); 
-    background-color: rgb(247, 215, 148,0.5); 
-    /* background-color: rgb(248, 239, 186,0.8);  */
+  display: grid;
+  place-items: center;
+  background-color: rgb(0, 0, 0, 1);
+  background-color: rgb(247, 215, 148, 0.5);
+  /* background-color: rgb(248, 239, 186,0.8);  */
 }
+
 .adminUserInnerdiv {
-    width: 90%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 2px solid rgb(39, 60, 117,0.5);
-    background-color: rgb(39, 60, 117,0.2);
-    padding: 5px;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgb(39, 60, 117, 0.5);
+  background-color: rgb(39, 60, 117, 0.2);
+  padding: 5px;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 8px;
-    border: 1px solid #dddddd;
-    text-align: center;
-  }
-  
-  th {
-    background-color: #2C3A47;
-    /* background-color: #1e272e; */
-    /* background-color:#0984e3; */
-    border: 1.5px solid gray;
-    color: white;
-  }
-
-    tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  tr:nth-child(odd){
-    background-color: #fff;
-  }
-   
-.adminUserDeleteBTN{
-    padding: 4px 10px;
-    font-size: 1.2em;
-    background-color: rgb(165, 42, 42,0.5);
-    color: black;
-    /* border: 1px solid brown; */
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2PX solid rgb(0, 0, 0,0.6);
-    border-left: 2PX solid rgb(0, 0, 0,0.6);
-    border-radius:1em;
-    cursor: pointer;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.adminUserDeleteBTN:hover{
-    background-color: red;
-    border: 2px solid black;
-    color: white;
-}
-.adminUserEditBTN{
-    padding: 4px 15px;
-    font-size: 1.2em;
-    background-color: #7bed9f;
-    background-color: rgb(184, 233, 148,0.6);
-    color: black;
-    /* border: 1px solid #3dc1d3;  */
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2PX solid rgb(0, 0, 0,0.6);
-    border-left: 2PX solid rgb(0, 0, 0,0.6);
-    border-radius: 8em;
-    cursor: pointer;
+th,
+td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: center;
 }
 
-.adminUserEditBTN:hover{
-    background-color: green;
-    background-color: rgba(50, 255, 126,1.0);
-    border: 2px solid black;
-    color: white;
-}
-.adminUserEditBTNLink{
-  color: black;
-}
-.adminUserEditBTNLink:hover{
+th {
+  background-color: #2C3A47;
+  /* background-color: #1e272e; */
+  /* background-color:#0984e3; */
+  border: 1.5px solid gray;
   color: white;
 }
 
-.adminUserSpan{
-color: #7158e2;
-color: #0984e3;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
-.totalUserHeading{
-    max-width: fit-content;
-    background-color: #f8a5c2;
-    background-color: #F8EFBA;
-    background-color: rgb(189, 197, 129,0.5);
-    /* border: 1px solid white;*/
-    border: 2px solid white; 
-    transition: linear;
-    color: #222f3e;
-    padding: 0.5em;
-    margin: 0.5em;
-  }
-  
 
+tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.adminUserDeleteBTN {
+  padding: 4px 10px;
+  font-size: 1.2em;
+  background-color: rgb(165, 42, 42, 0.5);
+  color: black;
+  /* border: 1px solid brown; */
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2PX solid rgb(0, 0, 0, 0.6);
+  border-left: 2PX solid rgb(0, 0, 0, 0.6);
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.adminUserDeleteBTN:hover {
+  background-color: red;
+  border: 2px solid black;
+  color: white;
+}
+
+.adminUserEditBTN {
+  padding: 4px 15px;
+  font-size: 1.2em;
+  background-color: #7bed9f;
+  background-color: rgb(184, 233, 148, 0.6);
+  color: black;
+  /* border: 1px solid #3dc1d3;  */
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2PX solid rgb(0, 0, 0, 0.6);
+  border-left: 2PX solid rgb(0, 0, 0, 0.6);
+  border-radius: 8em;
+  cursor: pointer;
+}
+
+.adminUserEditBTN:hover {
+  background-color: green;
+  background-color: rgba(50, 255, 126, 1.0);
+  border: 2px solid black;
+  color: white;
+}
+
+.adminUserEditBTNLink {
+  color: black;
+}
+
+.adminUserEditBTNLink:hover {
+  color: white;
+}
+
+.adminUserSpan {
+  color: #7158e2;
+  color: #0984e3;
+}
+
+.totalUserHeading {
+  max-width: fit-content;
+  background-color: #f8a5c2;
+  background-color: #F8EFBA;
+  background-color: rgb(189, 197, 129, 0.5);
+  /* border: 1px solid white;*/
+  border: 2px solid white;
+  transition: linear;
+  color: #222f3e;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.adminUserspinnerContainer{
+  width: 100%;
+  height: 70vh;
+  max-height: fit-content;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(189, 197, 129, 0.6);
+  color: blue;
+}
+.adminUserSpinnerIcon{
+  font-size: 4em;
+}
