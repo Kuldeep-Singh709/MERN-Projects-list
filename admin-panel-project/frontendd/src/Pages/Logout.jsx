@@ -5,24 +5,16 @@ import { toast } from 'react-toastify';
 
 
 
-// export const Logout=()=>{
 
 export default function Logout() {
-  const { LogoutUser } = useAuth();
+  const { logoutUser } = useAuth();
   useEffect(() => {
-    LogoutUser();
+    logoutUser();
     toast.info("Successfully Logged out");
-  }, [LogoutUser]);
+  }, [logoutUser]);
 
   return <Navigate to="/login" />;
-  // (
-  //   <>
-  //   < Navigate to={"/login"}/>
-  //   {console.log("Succesfully Logout")}
-  //   </>
-  // )
 }
-// navigate("/login");
 
 
 

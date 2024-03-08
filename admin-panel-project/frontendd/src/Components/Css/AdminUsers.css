@@ -118,9 +118,22 @@ tr:nth-child(odd) {
   border-radius: 1em;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: rgba(189, 197, 129, 0.6);
   color: blue;
 }
-.adminUserSpinnerIcon{
-  font-size: 4em;
+/* Animation for rotating spinner */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+.adminUserSpinnerIcon{
+ font-size: 5em;
+  animation: rotate 5s linear infinite; 
+}
+

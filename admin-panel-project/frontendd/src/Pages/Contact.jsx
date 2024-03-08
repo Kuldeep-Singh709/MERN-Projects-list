@@ -12,16 +12,16 @@ export default function Contact() {
 
   const [message, setMessage] = useState("");
 
-  const { user } = useAuth();
+  const { users } = useAuth();
 
   useEffect(() => {
-    if (user && user.userData) {
+    if (users && users.userData) {
       setContact({
-        username: user.userData.username || "",
-        email: user.userData.email || "",
+        username: users.userData.username || "",
+        email: users.userData.email || "",
       });
     }
-  }, [user]);
+  }, [users]);
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
@@ -45,8 +45,8 @@ export default function Contact() {
       if (response.ok) {
         const data = await response.json();
         setContact({
-          username: user.userData.username || "",
-          email: user.userData.email || "",
+          username: users.userData.username || "",
+          email: users.userData.email || "",
         });
         setMessage("");
         toast.success("Message Sent Successfully");

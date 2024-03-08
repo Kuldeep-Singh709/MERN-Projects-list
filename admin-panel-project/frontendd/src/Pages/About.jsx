@@ -5,17 +5,17 @@ import { useAuth } from "../Store/Auth";
 
 
 export default function About() {
-const {user} = useAuth();
+const {users} = useAuth();
 
-// const nameofUser =user.userData.username;
-// const nameofUser = user?.userData?.username;
+// const nameofUser =users.userData.username;
+// const nameofUser = users?.userData?.username;
 
-// console.log("uname1 :", user.userData.username);
-// console.log("uname1 :", user.userData.email);
+// console.log("uname1 :", users.userData.username);
+// console.log("uname1 :", users.userData.email);
 
       // useEffect(()=>{
       //   setuserName(
-      //     {userName:user.userData.username}
+      //     {userName:users.userData.username}
       //   );
       // })
   return (
@@ -27,7 +27,7 @@ const {user} = useAuth();
            <p>
               Welcome to our admin panel! We are dedicated to providing you with
               {/* Welcome {user.userData.username}to our admin panel! We are dedicated to providing you with */}
-              {/* Welcome " <span className="aboutSpanfirst">{user.userData.username}</span> " to our admin panel! We are dedicated to providing you with */}
+              {/* Welcome " <span className="aboutSpanfirst">{users.userData.username}</span> " to our admin panel! We are dedicated to providing you with */}
               the best tools and features to manage your business effectively.
               Our platform is designed to streamline your workflows, increase
               productivity, and drive success.
