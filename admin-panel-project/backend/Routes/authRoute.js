@@ -11,3 +11,5 @@ router.route("/auth/register").post(authController.Register);
 router.route("/auth/login").post(authController.userLogin);
 router.route("/userdata").get(authMiddleware,authController.userDetails)
 module.exports = router;
+
+
