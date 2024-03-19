@@ -2,6 +2,8 @@ const jwt = require("jsonwebtoken");
 const User= require("../models/userModel");
 
 const protectRoute = async (req, res, next) => {
+
+	process.env.JWT_SECRET="KULDEEP"
 	try {
 		const token = req.cookies.jwt;
 

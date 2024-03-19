@@ -1,4 +1,6 @@
 const jwt = require("jsonwebtoken");
+process.env.JWT_SECRET="KULDEEP";
+process.env.NODE_ENV="development";
 
 const generateTokenAndSetCookie = (userId, res) => {
     const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
