@@ -2,7 +2,7 @@
 
 
 // const bcrypt = require("bcrypt");
-const User = require("../models/patientModel");
+const Patient = require("../models/patientModel");
 
 exports.getAllpatient = async(req,res,next)=>{
 
@@ -24,28 +24,84 @@ exports.getAllpatient = async(req,res,next)=>{
 
 
 
-exports.RegisterApatient = async(req,res,next)=>{
+exports.RegisterApatient = async (req, res, next) => {
+  try {
+    // const { patientname, patientage, patientcontact, patientcondition, isBedAlloted } = req.body;
 
-    try {
+    // const { patientname,patientage,patientcondition,admissiontype,patientdoa,patientaddmissionreason,patientcontact,patientemergencycontactname,patientemergencycontactnumber,patientdob,patientgender,patientbloodgroup,patienttotalfees,patientadvancepayment,patientmedicalhistory,patientaddress,isHasInsurance,isBedAlloted }= req.body;
+    
+    const {patientName, patientAge, patientCondition, admissionType, patientDOA, patientAddmissionReason, patientContact, patientEmergencyContactName, patientEmergencyContactNumber, patientDOB, patientGender, patientBloodGroup, patientTotalFees, patientAdvancePayment, patientMedicalHistory, patientAddress, isHasInsurance, isBedAlloted }= req.body;
 
-        const { patientname, patientage, patientcontact,isBedAlloted } = req.body;
-
-
-        const user = await Patient.create({ patientname, patientage, patientcontact,isBedAlloted  });
-  
-        res.status(201).json({
-          success: true,
-          message: "patient Register Successfully", 
-        });
-
-    } catch (error) {
-        console.error('error at AuthController Catch');
-        return res.status(500).json({
-          success: false,
-          message: "Internal Server Error",
-        });
+    // Check if required fields are present
+    if (!patientName || !patientAge || !patientContact || !patientCondition) {
+      return res.status(400).json({
+        success: false,
+        message: "Please provide all required fields",
+      });
     }
-}
+
+    // Create a new patient
+    const patient = await Patient.create({
+      // patientname,
+      // patientage,
+      // patientcontact,
+      // patientcondition,
+      // isBedAlloted,
+
+      // patientname,
+      // patientage,
+      // patientcondition,
+      // admissiontype,
+      // patientdoa,
+      // patientaddmissionreason,
+      // patientcontact,
+      // patientemergencycontactname,
+      // patientemergencycontactnumber,
+      // patientdob,
+      // patientgender,
+      // patientbloodgroup,
+      // patienttotalfees,
+      // patientadvancepayment,
+      // patientmedicalhistory,
+      // patientaddress,
+      // isHasInsurance,
+      // isBedAlloted,
+
+
+      patientName,
+      patientAge,
+      patientCondition,
+      admissionType,
+      patientDOA,
+      patientAddmissionReason,
+      patientContact,
+      patientEmergencyContactName,
+      patientEmergencyContactNumber,
+      patientDOB,
+      patientGender,
+      patientBloodGroup,
+      patientTotalFees,
+      patientAdvancePayment,
+      patientMedicalHistory,
+      patientAddress,
+      isHasInsurance,
+      isBedAlloted,
+});
+
+    res.status(201).json({
+      success: true,
+      message: "Patient registered successfully",
+      patient,  // Return the created patient for confirmation
+    });
+  } catch (error) {
+    console.error("Error at RegisterApatient:", error);
+    return res.status(500).json({
+      success: false,
+      message: "Internal Server Error",
+    });
+  }
+};
+
 
 
 
